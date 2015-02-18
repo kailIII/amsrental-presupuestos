@@ -1,0 +1,124 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Configuration;
+use App\Persona;
+use App\Presupuesto;
+use App\Articulo;
+use App\ArticuloPresupuesto;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Http\Request;
+
+class PresupuestosController extends Controller {
+
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
+    public function getIndex(Request $req){
+        $data['presupuestos'] = Presupuesto::cargar()->filtrar($req->get('estatus',null))->get();
+        $data['estatus'] = isset(Presupuesto::$estatuses[$req->get('estatus')]) ? Presupuesto::$estatuses[$req->get('estatus')]:'Todos';
+        return view('presupuestos.index', $data);
+    }
+
+    public function getModificar($id = 0) {
+        $data['presupuesto'] = Presupuesto::findOrNew($id);
+        if($data['presupuesto']->puedeModificar()){
+            $data['clientes'] = Persona::comboClientes();
+            $data['articulos'] = Articulo::with('tipoArticulo')->get();
+            $data['articulosPre'] = $data['presupuesto']->articulos;
+            return view('presupuestos.modificar', $data);
+        }
+        return redirect('presupuestos')->with('mensaje','No se puede editar un presupuesto que no este en elaboración');
+    }
+
+    public function postModificar(Request $req) {
+        $presupuesto = Presupuesto::findOrNew($req->get('id', 0));
+        $presupuesto->fill($req->all());
+        if ($presupuesto->save()) {
+            return Redirect::to('presupuestos/modificar/' . $presupuesto->id)->with('mensaje', 'Se guardó el presupuesto correctamente');
+        }
+        return Redirect::back()->withInput()->withErrors($presupuesto->getErrors());
+    }
+
+    public function postAgregararticulo(Request $req) {
+        $presupuesto = Presupuesto::findOrFail($req->get('id', 0));
+        $articulo = Articulo::findOrFail($req->get('articulo_id', 0));
+        $artPre = new ArticuloPresupuesto();
+        $artPre->presupuesto()->associate($presupuesto);
+        $artPre->articulo()->associate($articulo);
+        $artPre->save();
+        $data['mensaje'] = "Se agregó el articulo al presupuesto correctamente";
+        $data['vista'] = $this->getModificar($req->get('id'))->render();
+        return response()->json($data);
+    }
+
+    public function postActualizararticulo(Request $req) {
+        $artPre = ArticuloPresupuesto::findOrFail($req->get('id'));
+        $artPre->fill($req->all());
+        if ($artPre->save()) {
+            $data['mensaje'] = "Se guardaron los datos correctamente";
+            $data['presupuesto'] = $artPre->presupuesto;
+            $data['articulo'] = $artPre;
+            return response()->json($data);
+        }
+        return response()->json(['errores' => $artPre->getError()],400);
+    }
+
+    public function deleteArticulo($id){
+        $artPre = ArticuloPresupuesto::findOrFail($id);
+        $articulo_id = $artPre->articulo_id;
+        $artPre->delete();
+        $data['mensaje'] = "Se eliminó el articulo del presupuesto correctamente";
+        $data['vista'] = $this->getModificar($articulo_id)->render();
+        return response()->json($data);
+    }
+
+    public function postOrdenar(Request $req){
+        ArticuloPresupuesto::ordenar($req->get('filas'));
+    }
+
+    public function getEnviar($id){
+        $presupuesto = Presupuesto::findOrFail($id);
+        $presupuesto->enviado();
+        return Redirect::to('presupuestos?estatus=2')->with('mensaje','Se marco el presupuesto como enviado al cliente correctamente.');
+    }
+
+    public function getAprobado($id){
+        $presupuesto = Presupuesto::findOrFail($id);
+        $presupuesto->aprobado();
+        return Redirect::to('presupuestos?estatus=3')->with('mensaje','Se marco el presupuesto como aprobado correctamente.');
+    }
+
+    public function getPagado($id){
+        $presupuesto = Presupuesto::findOrFail($id);
+        $presupuesto->pagado();
+        return Redirect::to('presupuestos?estatus=3')->with('mensaje','Se marco el presupuesto como aprobado correctamente.');
+    }
+
+    public function getReversar($id){
+        $presupuesto = Presupuesto::findOrFail($id);
+        $presupuesto->reversar();
+        return Redirect::to('presupuestos?estatus=3')->with('mensaje','Se marco el presupuesto como aprobado correctamente.');
+    }
+
+    public function getImprimir($id){
+        require_once(app_path() . '/Helpers/html2pdf.class.php');
+        $data['presupuesto'] = Presupuesto::findOrFail($id);
+        $content = view('reportes.html2pdf.presupuesto', $data)->render();
+        try {
+            $html2pdf = new \HTML2PDF('P', 'letter', 'es');
+            $html2pdf->pdf->SetDisplayMode('fullpage');
+            $html2pdf->writeHTML($content);
+            $html2pdf->Output('presupuesto.pdf');
+        } catch (HTML2PDF_exception $e) {
+            echo $e;
+        }
+    }
+
+    public function getEnviarcorreo($id){
+
+    }
+
+}
