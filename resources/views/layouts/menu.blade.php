@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">AMS Rental</a>
+        {!!HTML::link('', 'AMS Rental', ['class'=>'navbar-brand'])!!}
     </div>
     <!-- /.navbar-header -->
 
