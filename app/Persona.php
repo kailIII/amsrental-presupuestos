@@ -77,7 +77,7 @@ class Persona extends BaseModel implements Interfaces\SimpleTableInterface {
     }
 
     public static function comboClientes(){
-        $combo = Persona::filtrar('P')->get()->lists('nombre','id');
+        $combo = Persona::filtrar('C')->get()->lists('nombre','id');
         $combo[''] = 'Seleccione';
         return $combo;
 

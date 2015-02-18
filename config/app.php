@@ -127,7 +127,6 @@ return [
         'App\Providers\EventServiceProvider',
         'App\Providers\RouteServiceProvider',
         'App\Providers\HtmlServiceProvider',
-        'Barryvdh\Debugbar\ServiceProvider',
     ],
     /*
       |--------------------------------------------------------------------------

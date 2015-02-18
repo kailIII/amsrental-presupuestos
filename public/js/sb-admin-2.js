@@ -82,6 +82,14 @@ $(function () {
 });
 
 function docReady() {
+    $('.jqueryDatePicker').datepicker({
+        format: "dd/mm/yyyy",
+        todayBtn: "linked",
+        clearBtn: true,
+        language: "es",
+        autoclose: true
+    });
+
     $(".decimal-format").css('text-align', 'right');
     $(".decimal-format").autoNumeric('init', {
         aSep: ".",
@@ -92,9 +100,10 @@ function docReady() {
     $('input, select, textarea').each(function () {
         if ($(this).attr("data-tienetooltip") == undefined && $(this).attr('type') != "radio" && $(this).attr('type') != "hidden") {
             $(this).attr("data-tienetooltip", 1);
-           // $(this).tooltip({'trigger': 'focus hover', 'title': $(this).attr("placeholder")});
+            $(this).tooltip({'title': $(this).attr("placeholder")});
         }
     });
+
     $('table.jqueryTable').each(function () {
         if ($(this).attr('data-esdatatable') == undefined) {
             $(this).attr('data-esdatatable', true);

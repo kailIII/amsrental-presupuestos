@@ -9,10 +9,8 @@
 
         <title>AMS Rental</title>
 
-        {!!HTML::style('bower_components/bootstrap/dist/css/bootstrap.min.css')!!}
+        {!!HTML::style('css/bootstrap.min.css')!!}
         {!!HTML::style('bower_components/metisMenu/dist/metisMenu.min.css')!!}
-        {!!HTML::style('css/timeline.css')!!}
-        {!!HTML::style('css/sb-admin-2.css')!!}
         {!!HTML::style('css/sb-admin-2.css')!!}
         {!!HTML::style('bower_components/font-awesome/css/font-awesome.min.css')!!}
 
@@ -58,10 +56,9 @@
             var baseUrl = '{{url("")}}/';
         </script>
         {!!HTML::script('bower_components/jquery/dist/jquery.min.js')!!}
-        {!!HTML::script('bower_components/bootstrap/dist/js/bootstrap.min.js')!!}
+        {!!HTML::script('js/bootstrap.min.js')!!}
         {!!HTML::script('bower_components/metisMenu/dist/metisMenu.min.js')!!}
 
-        {!!HTML::script('bower_components/raphael/raphael-min.js')!!}
         {!!HTML::script('js/sb-admin-2.js')!!}
 
         {!!HTML::script('js/datatables.min.js')!!}
@@ -69,7 +66,10 @@
         {!!HTML::script('js/jquery-ui.min.js')!!}
         {!!HTML::script('js/jquery.autoNumeric.min.js')!!}
         {!!HTML::style('css/datatables.bootstrap.min.css')!!}
-        {!!HTML::style('css/datatables.min.css')!!}  
+        {!!HTML::style('css/datatables.min.css')!!}
+        {!!HTML::script('js/datepicker.min.js')!!}
+        {!!HTML::script('js/locales/bootstrap-datepicker.es.js')!!}
+        {!!HTML::style('css/datepicker.min.css')!!}
 
         @yield('javascript')
     </body>

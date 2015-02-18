@@ -174,7 +174,7 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
     }
 
     public function puedeModificar(){
-        return $this->estatus == 1;
+        return $this->estatus == 1 || !isset($this->id);
     }
 
     public function puedeEnviarCliente(){
