@@ -94,6 +94,9 @@
                 <li>
                     {!!HTML::menu('tipo-articulos','dashboard','Tipos de Articulos')!!}
                 </li>
+                <li>
+                    {!!HTML::menu('configuraciones','dashboard','Configuración')!!}
+                </li>
             </ul>
         </div>
         <!-- /.sidebar-collapse -->
