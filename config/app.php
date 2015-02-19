@@ -34,7 +34,7 @@ return [
       | ahead and set this to a sensible default for you out of the box.
       |
      */
-    'timezone' => 'UTC',
+    'timezone' => 'America/Caracas',
     /*
       |--------------------------------------------------------------------------
       | Application Locale Configuration
@@ -45,7 +45,7 @@ return [
       | to any of the locales which will be supported by the application.
       |
      */
-    'locale' => 'en',
+    'locale' => 'es',
     /*
       |--------------------------------------------------------------------------
       | Application Fallback Locale

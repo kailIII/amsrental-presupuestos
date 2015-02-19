@@ -35,8 +35,8 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
             'cliente_id' => 'required|integer',
             'codigo' => 'required',
             'estatus' => 'required|integer',
-            'fecha_evento' => 'required|date',
-            'fecha_montaje' => 'required|date',
+            'fecha_evento' => 'required|date|after:'.$this->fecha_montaje,
+            'fecha_montaje' => 'required|date|before:'.$this->fecha_evento,
             'nombre_evento' => 'required',
             'lugar_evento' => 'required',
             'impuesto' => 'required',
@@ -96,7 +96,7 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
         return [
             'estatus' => 1,
             'codigo' =>$codigo,
-            'impuesto' => Configuration::get('impuesto'),
+            'impuesto' => Configuracion::get('impuesto'),
         ];
     }
 

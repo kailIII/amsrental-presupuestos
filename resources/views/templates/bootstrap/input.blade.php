@@ -24,7 +24,7 @@
     @endif
     @if($errors->has($attrName))
     @foreach($errors->get($attrName) as $message)
-    <span class="help-block">{!!$message!!}.</span>
+    <span class="help-block">{!!$message!!}</span>
     @endforeach
     @endif
 </div>
