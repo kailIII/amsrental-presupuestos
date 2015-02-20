@@ -10,6 +10,18 @@ namespace App\Services;
 
 class FormBuilder extends \Illuminate\Html\FormBuilder {
 
+    public function bootstrap($name, $value, $label, $numCols=6, $editor = false, $type="text"){
+        if($editor){
+            $params['class'] = 'form-control ckeditor';
+            $type = 'textarea';
+        }else{
+            $params['class'] = 'form-control';
+        }
+        $params['id'] = $name;
+        $params['placeholder'] = $label;
+        return view('templates.bootstrap.input_only', compact('name', 'value', 'label', 'numCols','type', 'params', 'editor'));
+    }
+
     public function display($obj, $attrName, $numCols = 12) {
         $data['numCols'] = $numCols;
         $data['attrName'] = $attrName;

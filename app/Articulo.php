@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Interfaces\SimpleTableInterface;
 
@@ -34,6 +36,7 @@ class Articulo extends BaseModel implements SimpleTableInterface {
             'nombre' => 'Nombre',
             'tipo_articulo_id' => 'Tipo de articulo',
             'ind_excento' => 'Excento?',
+            'disponibilidad'=>'Disp. del articulo',
         ];
     }
 
@@ -53,10 +56,69 @@ class Articulo extends BaseModel implements SimpleTableInterface {
         return $this->hasMany('App\ArticuloProveedor')->with('proveedor');
     }
 
+    public function proveedoresExternos() {
+        return $this->belongsToMany('App\Persona', 'articulo_proveedor', 'articulo_id', 'proveedor_id')
+            ->whereIndExterno(true);
+    }
+
+    public function proveedoresInternos() {
+        return $this->belongsToMany('App\Persona', 'articulo_proveedor', 'articulo_id', 'proveedor_id')
+            ->whereIndExterno(false);
+    }
+
     public function getTableFields() {
         return [
-            'nombre', 'tipoArticulo->nombre', 'ind_excento'
+            'nombre', 'tipoArticulo->nombre', 'disponibilidad'
         ];
+    }
+
+    public function getDisponibilidadAttribute(){
+        return $this->getDisponibilidad(Carbon::now(), Carbon::now());
+    }
+
+    public function getDisponibilidad($fecDesde, $fecHasta, $pretty = true, $proveedor = null) {
+        $contExterno = $this->proveedoresExternos()->count();
+        if ($contExterno > 0 && $proveedor == null) {
+            return $pretty ? "&infin;" : 99999;
+        } else if ($proveedor != null && $proveedor->ind_externo) {
+            return $pretty ? "&infin;" : 99999;
+        }
+        $contPropio = $this->proveedoresInternos()->count();
+        if ($contPropio == 0) {
+            return $pretty ? "No tiene proveedor" : 0;
+        } else {
+            $cantTotal = $this->proveedoresInternos()->sum('cantidad');
+
+            $cantOcupada = Presupuesto::join('articulo_presupuesto as b', 'presupuestos.id', '=', 'b.presupuesto_id')
+                ->join('detalle_articulos as c', 'b.id', '=', 'c.articulo_presupuesto_id')
+                ->join('personas as d', 'c.proveedor_id', '=', 'd.id')
+                ->where('presupuestos.fecha_montaje', '<=', $fecDesde->format('Y-m-d'))
+                ->where('presupuestos.fecha_evento', '>=', $fecHasta->format('Y-m-d'))
+                ->where('d.ind_externo', '=', false)
+                ->where('b.articulo_id', '=', $this->id);
+            if ($proveedor != null) {
+                $cantOcupada = $cantOcupada->where('c.proveedor_id', '=', $proveedor->id);
+            }
+            $cantOcupada = $cantOcupada->count('c.articulo_presupuesto_id');
+            $cantDisponible = $cantTotal - $cantOcupada;
+            return ($pretty ? number_format($cantDisponible, 0, '.', ',') :
+                $cantDisponible);
+        }
+    }
+
+    public function proveedoresDisponibles($fecha_desde, $fecha_hasta, $internos = true){
+        $proveedoresDisp = new Collection();
+        if($internos){
+            $proveedores = $this->proveedoresInternos;
+        }else {
+            $proveedores = $this->proveedoresExternos;
+        }
+        foreach($proveedores as $proveedor){
+            if($this->getDisponibilidad($fecha_desde, $fecha_hasta, false, $proveedor)>0){
+                $proveedoresDisp->add($proveedor);
+            }
+        }
+        return $proveedoresDisp;
     }
 
 }

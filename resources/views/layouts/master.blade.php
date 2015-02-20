@@ -51,6 +51,8 @@
         <h4><div id="contenedorEspera" class="alert alert-warning navbar-fixed-top" style="display: none;"></div></h4>
         <h4><div id="contenedorCorrecto" class="alert alert-success navbar-fixed-top" style="display: none;"></div></h4>
         <h4><div id="contenedorError" class="alert alert-danger navbar-fixed-top" style="display: none;"></div></h4>
+        <div class="modal fade" id="divModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+        <div class="modal fade" id="divModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 
         <script>
             var baseUrl = '{{url("")}}/';

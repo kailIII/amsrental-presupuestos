@@ -81,6 +81,10 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
         return $this->hasMany('App\ArticuloPresupuesto')->with('articulo')->orderBy('orden');
     }
 
+    public function detalles(){
+        return $this->hasManyThrough('App\DetalleArticulo','App\ArticuloPresupuesto')->with('articuloPresupuesto.articulo');
+    }
+
     public function setFechaEventoAttribute($param) {
         $this->attributes['fecha_evento'] = \Carbon::createFromFormat('d/m/Y', $param);
     }
@@ -136,9 +140,9 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
 
     public function getDetalleCostosAttribute(){
         $str = "Sub Total: ".Helper::tm($this->sub_total).'<br>';
-        $str .= "Monto Excento: ".Helper::tm($this->sub_total).'<br>';
-        $str .= "Monto IVA ({$this->impuesto}%): ".Helper::tm($this->sub_total).'<br>';
-        $str .= "Monto Total: ".Helper::tm($this->sub_total);
+        $str .= "Monto Excento: ".Helper::tm($this->monto_excento).'<br>';
+        $str .= "Monto IVA ({$this->impuesto}%): ".Helper::tm($this->monto_iva).'<br>';
+        $str .= "Monto Total: ".Helper::tm($this->monto_total);
         return $str;
     }
 
@@ -191,6 +195,10 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
 
     public function puedeReversar(){
         return $this->estatus == 4;
+    }
+
+    public function puedeAsignarProveedor(){
+        return $this->estatus < 4;
     }
 
     private function cambiarEstatus($necesario, $nuevo){

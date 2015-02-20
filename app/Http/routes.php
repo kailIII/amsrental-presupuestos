@@ -21,4 +21,5 @@ Route::controllers([
     'personas' => 'PersonasController',
     'presupuestos' => 'PresupuestosController',
     'configuraciones' => 'ConfiguracionesController',
+    'usuarios' => 'UsuariosController',
 ]);

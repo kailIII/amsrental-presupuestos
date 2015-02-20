@@ -48,6 +48,7 @@
                                 <td>{{$presupuesto->estatus_display}}</td>
                                 <td>
                                     <a class="btn btn-xs btn-primary fa fa-print"  title="Imprimir" href="{{url('presupuestos/imprimir/'.$presupuesto->id)}}"></a>
+                                    <a class="btn btn-xs btn-primary fa fa-envelope abrir-modal"  title="Enviar por correo" href="{{url('presupuestos/enviarcorreo/'.$presupuesto->id)}}"></a>
                                     @if($presupuesto->puedeModificar())
                                         <a class="btn btn-xs btn-primary fa fa-pencil" title="Modificar" href="{{url('presupuestos/modificar/'.$presupuesto->id)}}"></a>
                                     @endif
@@ -62,6 +63,9 @@
                                     @endif
                                     @if($presupuesto->puedeReversar())
                                         <a class="btn btn-xs btn-primary fa fa-undo" title="Reversar Pago" href="{{url('presupuestos/reversar/'.$presupuesto->id)}}"></a>
+                                    @endif
+                                    @if($presupuesto->puedeAsignarProveedor())
+                                        <a class="btn btn-xs btn-primary fa fa-list" title="Asignar Proveedores" href="{{url('presupuestos/asignarproveedores/'.$presupuesto->id)}}"></a>
                                     @endif
                                 </td>
                             </tr>

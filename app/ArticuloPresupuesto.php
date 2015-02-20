@@ -18,7 +18,7 @@ class ArticuloPresupuesto extends BaseModel implements DecimalInterface{
     ];
 
     /**
-     * Reglas que debe cumplir el objeto al momento de ejecutar el metodo save, 
+     * Reglas que debe cumplir el objeto al momento de ejecutar el metodo save,
      * si el modelo no cumple con estas reglas el metodo save retornará false, y los cambios realizados no haran persistencia.
      * @link http://laravel.com/docs/validation#available-validation-rules
      * @var array
@@ -74,6 +74,10 @@ class ArticuloPresupuesto extends BaseModel implements DecimalInterface{
         return $this->belongsTo('App\Articulo');
     }
 
+    public function detalleArticulos(){
+        return $this->hasMany('App\DetalleArticulo');
+    }
+
     public function getCostoTotalAttribute() {
         return $this->dias * $this->costo_venta * $this->cantidad;
     }
@@ -86,11 +90,39 @@ class ArticuloPresupuesto extends BaseModel implements DecimalInterface{
     public static function ordenar($filas){
         $filas = json_decode($filas);
         foreach($filas as $fila){
-            $art = static::find($fila->id);
-            if($art){
-                $art->orden = $fila->orden;
-                $art->save();
+            if(isset($fila->id)){
+                $art = static::find($fila->id);
+                if($art){
+                    $art->orden = $fila->orden;
+                    $art->save();
+                }
             }
         }
+    }
+
+    public function savingModel($model){
+        if($this->isDirty('cantidad')){
+            $actuales = $this->detalleArticulos()->count();
+            if($this->cantidad>=$actuales){
+                for($i = $actuales; $i<$this->cantidad; $i++){
+                    $detalle = DetalleArticulo::create(['articulo_presupuesto_id'=>$this->id]);
+                    $detalle->tratarAsignarProveedor();
+                }
+            }else{
+                $detalles = $this->detalleArticulos()->take($actuales-$this->cantidad)->get();
+                $detalles->each(function($detalle){
+                    $detalle->delete();
+                });
+                $detalles = $this->detalleArticulos;
+                $detalles->each(function($detalle){
+                    $detalle->tratarAsignarProveedor();
+                });
+            }
+        }
+        return parent::savingModel($model);
+    }
+
+    public function deletingModel(){
+        $this->detalleArticulos()->delete();
     }
 }

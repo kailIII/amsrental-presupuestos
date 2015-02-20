@@ -35,7 +35,7 @@ class HtmlBuilder extends \Illuminate\Html\HtmlBuilder {
             $data['urlAdd'] = $data['url'] . '/modificar?' . $data['params'];
             $data['nombreAdd'] = $model->getPrettyName();
         }
-        return \View::make('templates.bootstrap.table', $data);
+        return \View::make('templates.bootstrap.table', $data)->render();
     }
 
     function imageLink($hrefLink, $toltip, $urlImage) {

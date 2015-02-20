@@ -78,6 +78,72 @@ $(function () {
         aSep: ".",
         aDec: ","
     });
+    $(document).on('click','.abrir-modal', function(evt) {
+        evt.preventDefault();
+        var url = $(this).attr('href');
+        $.get(url, function(data) {
+            if ($("#divModal").is(':empty')) {
+                $("#divModal").html(data);
+                $("#divModal").modal('show');
+            } else {
+                $("#divModal2").html(data);
+                $("#divModal2").modal('show');
+            }
+        });
+    });
+    $('[data-toggle="tooltip"]').tooltip({html:true});
+    $(document).on('submit','form.saveajax',function (e) {
+        e.preventDefault();
+        var data, contenido;
+        if ($(this).attr('enctype') == "multipart/form-data") {
+            data = new FormData(this);
+            contenido = false;
+        } else {
+            data = $(this).serialize();
+            contenido = 'application/x-www-form-urlencoded; charset=UTF-8';
+        }
+        $(this).find('input, textarea, select, checkbox, radio').parent().removeClass("has-error");
+        $(this).find('.help-block').remove();
+        $.ajax({
+            url: $(this).attr('action'),
+            data: data,
+            cache: false,
+            processData: false,
+            contentType: contenido,
+            formulario: this,
+            dataType: 'json',
+            method: $(this).attr("method") == undefined ? "POST" : $(this).attr("method"),
+            success: function (data) {
+                if (data.mensaje != "") {
+                    mostrarMensaje(data.mensaje);
+                }
+                if($(this.formulario).data('reload')!=undefined){
+                    window.location.reload();
+                    return;
+                }
+                var callback = $(this.formulario).attr('data-callback');
+                if (callback != undefined && callback != "") {
+                    window[callback](data);
+                }
+                if (data.vista != undefined) {
+                    $(this.formulario).parent().html(data.vista);
+                }
+            },
+            error: function (data)
+            {
+                var formulario = this.formulario;
+                if (data.status == 422) {
+                    mostrarError(procesarErrores(data.responseJSON));
+                    $.each(data.responseJSON, function (key, value) {
+                        $('#' + key).parent().addClass('has-error has-feedback');
+                        $.each(value, function (key2, value2) {
+                            $(formulario).find('#' + key).parent().append("<span class='help-block'>" + value2 + "</span>");
+                        });
+                    });
+                }
+            }
+        });
+    });
     docReady();
 });
 
@@ -95,7 +161,6 @@ function docReady() {
         aSep: ".",
         aDec: ","
     });
-    $('[data-toggle="tooltip"]').tooltip({html:true});
 
     $('input, select, textarea').each(function () {
         if ($(this).attr("data-tienetooltip") == undefined && $(this).attr('type') != "radio" && $(this).attr('type') != "hidden") {

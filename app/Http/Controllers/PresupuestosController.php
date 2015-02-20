@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Configuracion;
 use App\Configuration;
+use App\Http\Requests\EnviarCorreoRequest;
 use App\Persona;
 use App\Presupuesto;
 use App\Articulo;
@@ -103,7 +105,7 @@ class PresupuestosController extends Controller {
         return Redirect::to('presupuestos?estatus=3')->with('mensaje','Se marco el presupuesto como aprobado correctamente.');
     }
 
-    public function getImprimir($id){
+    public function getImprimir($id, $saveLocal=false){
         require_once(app_path() . '/Helpers/html2pdf.class.php');
         $data['presupuesto'] = Presupuesto::findOrFail($id);
         $content = view('reportes.html2pdf.presupuesto', $data)->render();
@@ -111,14 +113,35 @@ class PresupuestosController extends Controller {
             $html2pdf = new \HTML2PDF('P', 'letter', 'es');
             $html2pdf->pdf->SetDisplayMode('fullpage');
             $html2pdf->writeHTML($content);
-            $html2pdf->Output('presupuesto.pdf');
+            if($saveLocal){
+                $html2pdf->Output(storage_path('app/presupuesto.pdf'), 'F');
+            }else{
+                $html2pdf->Output('presupuesto.pdf');
+            }
         } catch (HTML2PDF_exception $e) {
             echo $e;
         }
     }
 
     public function getEnviarcorreo($id){
+        $data['presupuesto'] = Presupuesto::findOrFail($id);
+        $data['cliente'] = $data['presupuesto']->cliente;
+        return view('presupuestos.enviarcorreo', $data);
+    }
 
+    public function postEnviarcorreo(EnviarCorreoRequest $request){
+        $this->getImprimir($request->get('id'), true);
+        $data['mensaje'] = $request->get('mensaje');
+        \Mail::send('emails.presupuesto', $data, function($message) use ($request) {
+            $message->to($request->get('correo'))->subject($request->get('asunto'))->cc(\Auth::user()->email);
+            $message->attach(storage_path('app/presupuesto.pdf'));
+        });
+    }
+
+    public function getAsignarproveedores($presupuesto_id){
+        $data['presupuesto'] = Presupuesto::findOrFail($presupuesto_id);
+        $data['detalles'] = $data['presupuesto']->detalles;
+        return view('presupuestos.asignarproveedores', $data);
     }
 
 }

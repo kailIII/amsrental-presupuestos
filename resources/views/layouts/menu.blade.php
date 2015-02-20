@@ -13,14 +13,10 @@
     <ul class="nav navbar-top-links navbar-right">
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                <i class="fa fa-user fa-fw"></i>  {{Auth::user()->name}} <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="{{url('user/profile')}}"><i class="fa fa-user fa-fw"></i> Perfil</a>
-                </li>
-                <li class="divider"></li>
-                <li><a href="{{url('auth/logout')}}"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesión</a>
-                </li>
+                <li>{!!HTML::menu('auth/logout','sign-out','Cerrar Sesión')!!}</li>
             </ul>
             <!-- /.dropdown-user -->
         </li>
@@ -95,7 +91,10 @@
                     {!!HTML::menu('tipo-articulos','dashboard','Tipos de Articulos')!!}
                 </li>
                 <li>
-                    {!!HTML::menu('configuraciones','dashboard','Configuración')!!}
+                    {!!HTML::menu('configuraciones','cog','Configuración')!!}
+                </li>
+                <li>
+                    {!!HTML::menu('usuarios','users','Usuarios')!!}
                 </li>
             </ul>
         </div>

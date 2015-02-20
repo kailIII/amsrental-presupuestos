@@ -1,6 +1,8 @@
 <?php namespace App;
 
-class DetalleArticulo extends BaseModel {
+use App\Interfaces\DecimalInterface;
+
+class DetalleArticulo extends BaseModel implements DecimalInterface{
 
     protected $table = "detalle_articulos";
 
@@ -17,19 +19,19 @@ class DetalleArticulo extends BaseModel {
         return [
             'articulo_presupuesto_id'=>'required|integer',
             'proveedor_id'=>'integer',
-            'costo_compra'=>'required',
-            'ind_confirmado'=>'required',
+            'costo_compra'=>'',
+            'ind_confirmado'=>'',
             'fecha_pago'=>'',
         ];
     }
 
     protected function getPrettyFields() {
         return [
-            'articulo_presupuesto_id'=>'articulo_presupuesto_id',
-            'proveedor_id'=>'proveedor_id',
-            'costo_compra'=>'costo_compra',
-            'ind_confirmado'=>'ind_confirmado',
-            'fecha_pago'=>'fecha_pago',
+            'articulo_presupuesto_id'=>'Articulo Presupuesto',
+            'proveedor_id'=>'Proveedor',
+            'costo_compra'=>'Costo de Compra',
+            'ind_confirmado'=>'Confirmado?',
+            'fecha_pago'=>'Fecha de Pago',
 
         ];
     }
@@ -50,8 +52,31 @@ class DetalleArticulo extends BaseModel {
      * @return Proveedor
      */
     public function proveedor(){
-        return $this->belongsTo('App\Proveedor');
+        return $this->belongsTo('App\Persona');
     }
 
+    static function getDecimalFields(){
+        return ['costo_compra'];
+    }
 
+    public function tratarAsignarProveedor(){
+        $presupuesto = $this->articuloPresupuesto->presupuesto;
+        $proveedores = $this->articuloPresupuesto->articulo->proveedoresDisponibles($presupuesto->fecha_montaje, $presupuesto->fecha_evento);
+        if($proveedores->count()>0){
+            $this->proveedor_id = $proveedores->first()->id;
+            $this->ind_confirmado = true;
+        }else{
+            $this->tratarAsignarProveedorExterno();
+        }
+        $this->save();
+    }
+
+    private function tratarAsignarProveedorExterno(){
+        $presupuesto = $this->articuloPresupuesto->presupuesto;
+        $proveedores = $this->articuloPresupuesto->articulo->proveedoresDisponibles($presupuesto->fecha_montaje, $presupuesto->fecha_evento, false);
+        if($proveedores->count()>0){
+            $this->proveedor_id = $proveedores->first()->id;
+            $this->ind_confirmado = true;
+        }
+    }
 }
