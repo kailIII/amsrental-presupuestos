@@ -6,6 +6,21 @@ namespace App;
  * Description of Serie
  *
  * @author arasm_000
+ * @property integer $id 
+ * @property string $variable 
+ * @property string $value 
+ * @property string $description 
+ * @property boolean $ind_editor 
+ * @property \Carbon\Carbon $created_at 
+ * @property \Carbon\Carbon $updated_at 
+ * @property-read mixed $estatus_display 
+ * @method static \Illuminate\Database\Query\Builder|\App\Configuracion whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Configuracion whereVariable($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Configuracion whereValue($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Configuracion whereDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Configuracion whereIndEditor($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Configuracion whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Configuracion whereUpdatedAt($value)
  */
 use Illuminate\Database\Eloquent\Model;
 

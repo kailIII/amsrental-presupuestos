@@ -52,6 +52,9 @@
                                     @if($presupuesto->puedeModificar())
                                         <a class="btn btn-xs btn-primary fa fa-pencil" title="Modificar" href="{{url('presupuestos/modificar/'.$presupuesto->id)}}"></a>
                                     @endif
+                                    @if($presupuesto->puedeAnular())
+                                        <a class="btn btn-xs btn-danger fa fa-remove" title="Anular" href="{{url('presupuestos/anular/'.$presupuesto->id)}}"></a>
+                                    @endif
                                     @if($presupuesto->puedeEnviarCliente())
                                         <a class="btn btn-xs btn-primary fa fa-send" title="Enviado al cliente" href="{{url('presupuestos/enviar/'.$presupuesto->id)}}"></a>
                                     @endif
@@ -65,7 +68,7 @@
                                         <a class="btn btn-xs btn-primary fa fa-undo" title="Reversar Pago" href="{{url('presupuestos/reversar/'.$presupuesto->id)}}"></a>
                                     @endif
                                     @if($presupuesto->puedeAsignarProveedor())
-                                        <a class="btn btn-xs btn-primary fa fa-list" title="Asignar Proveedores" href="{{url('presupuestos/asignarproveedores/'.$presupuesto->id)}}"></a>
+                                        <a class="btn btn-xs btn-primary fa fa-list" title="Asignar Proveedores" href="{{url('detalle-articulos/asignarproveedores/'.$presupuesto->id)}}"></a>
                                     @endif
                                 </td>
                             </tr>

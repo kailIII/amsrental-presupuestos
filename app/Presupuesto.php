@@ -5,6 +5,44 @@ namespace App;
 use App\Helpers\Helper;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * App\Presupuesto
+ *
+ * @property integer $id 
+ * @property integer $cliente_id 
+ * @property string $codigo 
+ * @property integer $estatus 
+ * @property \Carbon\Carbon $fecha_evento 
+ * @property \Carbon\Carbon $fecha_montaje 
+ * @property string $nombre_evento 
+ * @property string $lugar_evento 
+ * @property float $impuesto 
+ * @property \Carbon\Carbon $deleted_at 
+ * @property \Carbon\Carbon $created_at 
+ * @property \Carbon\Carbon $updated_at 
+ * @property-read \App\Persona $cliente 
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\ArticuloPresupuesto')->with('articulo')->orderBy('orden[] $articulos 
+ * @property-read mixed $estatus_display 
+ * @property-read mixed $sub_total 
+ * @property-read mixed $monto_excento 
+ * @property-read mixed $monto_iva 
+ * @property-read mixed $monto_total 
+ * @property-read mixed $detalle_costos 
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereClienteId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereCodigo($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereEstatus($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereFechaEvento($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereFechaMontaje($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereNombreEvento($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereLugarEvento($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereImpuesto($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereDeletedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereUpdatedAt($value)
+ * @method static \App\Presupuesto filtrar($estatus)
+ * @method static \App\Presupuesto cargar()
+ */
 class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface {
 
     use SoftDeletes;
@@ -59,10 +97,9 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
     public static $estatuses = [
         '1'=>'Elaboracion',
         '2'=>'Esperando Aprobacion',
-        '3'=>'Aprobados',
-        '4'=>'Finalizados',
-        '5'=>'Pagados',
-        '6'=>'Anulados',
+        '3'=>'Aprobado',
+        '4'=>'Pagado',
+        '5'=>'Anulado',
     ];
 
     public function getPrettyName() {
@@ -153,10 +190,6 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
         return $query;
     }
 
-    public function scopeCargar($query){
-        return $query->with('cliente');
-    }
-
     public function enviado(){
         $this->cambiarEstatus(1,2);
     }
@@ -165,16 +198,16 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
         $this->cambiarEstatus(2,3);
     }
 
-    public function finalizado(){
+    public function pagado(){
         $this->cambiarEstatus(3,4);
     }
 
-    public function pagado(){
-        $this->cambiarEstatus(4,5);
+    public function reversar(){
+        $this->cambiarEstatus(4,3);
     }
 
-    public function reversar(){
-        $this->cambiarEstatus(5,4);
+    public function anular(){
+        $this->cambiarEstatus([1,2,3],5);
     }
 
     public function puedeModificar(){
@@ -197,15 +230,25 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
         return $this->estatus == 4;
     }
 
+    public function puedeAnular(){
+        return $this->estatus < 4;
+    }
+
     public function puedeAsignarProveedor(){
         return $this->estatus < 4;
     }
 
     private function cambiarEstatus($necesario, $nuevo){
-        if($this->estatus==$necesario){
+        if(is_array($necesario) && in_array($this->estatus, $necesario)) {
+            $this->estatus = $nuevo;
+        }else if($this->estatus==$necesario){
             $this->estatus = $nuevo;
         }
         $this->save();
+    }
+
+    public function scopeEagerLoad($query){
+        return $query->with('cliente')->with('articulos');
     }
 
 }

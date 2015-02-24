@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Configuracion;
 use App\Configuration;
+use App\DetalleArticulo;
 use App\Http\Requests\EnviarCorreoRequest;
 use App\Persona;
 use App\Presupuesto;
@@ -19,7 +20,7 @@ class PresupuestosController extends Controller {
     }
 
     public function getIndex(Request $req){
-        $data['presupuestos'] = Presupuesto::cargar()->filtrar($req->get('estatus',null))->get();
+        $data['presupuestos'] = Presupuesto::eagerLoad()->filtrar($req->get('estatus',null))->get();
         $data['estatus'] = isset(Presupuesto::$estatuses[$req->get('estatus')]) ? Presupuesto::$estatuses[$req->get('estatus')]:'Todos';
         return view('presupuestos.index', $data);
     }
@@ -28,7 +29,7 @@ class PresupuestosController extends Controller {
         $data['presupuesto'] = Presupuesto::findOrNew($id);
         if($data['presupuesto']->puedeModificar()){
             $data['clientes'] = Persona::comboClientes();
-            $data['articulos'] = Articulo::with('tipoArticulo')->get();
+            $data['articulos'] = Articulo::eagerLoad()->get();
             $data['articulosPre'] = $data['presupuesto']->articulos;
             return view('presupuestos.modificar', $data);
         }
@@ -84,25 +85,31 @@ class PresupuestosController extends Controller {
     public function getEnviar($id){
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->enviado();
-        return Redirect::to('presupuestos?estatus=2')->with('mensaje','Se marco el presupuesto como enviado al cliente correctamente.');
+        return Redirect::to('presupuestos?estatus=2')->with('mensaje','Se marcó el presupuesto como enviado al cliente correctamente.');
     }
 
     public function getAprobado($id){
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->aprobado();
-        return Redirect::to('presupuestos?estatus=3')->with('mensaje','Se marco el presupuesto como aprobado correctamente.');
+        return Redirect::to('presupuestos?estatus=3')->with('mensaje','Se marcó el presupuesto como aprobado correctamente.');
     }
 
     public function getPagado($id){
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->pagado();
-        return Redirect::to('presupuestos?estatus=3')->with('mensaje','Se marco el presupuesto como aprobado correctamente.');
+        return Redirect::to('presupuestos?estatus=4')->with('mensaje','Se marcó el presupuesto como pagado correctamente.');
+    }
+
+    public function getAnular($id){
+        $presupuesto = Presupuesto::findOrFail($id);
+        $presupuesto->anular();
+        return Redirect::to('presupuestos?estatus=4')->with('mensaje','Se marcó el presupuesto como anulado correctamente.');
     }
 
     public function getReversar($id){
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->reversar();
-        return Redirect::to('presupuestos?estatus=3')->with('mensaje','Se marco el presupuesto como aprobado correctamente.');
+        return Redirect::to('presupuestos?estatus=3')->with('mensaje','Se marcó el presupuesto como aprobado correctamente.');
     }
 
     public function getImprimir($id, $saveLocal=false){
@@ -142,6 +149,20 @@ class PresupuestosController extends Controller {
         $data['presupuesto'] = Presupuesto::findOrFail($presupuesto_id);
         $data['detalles'] = $data['presupuesto']->detalles;
         return view('presupuestos.asignarproveedores', $data);
+    }
+
+    public function getProveedoresdisponibles($detalle_id){
+
+    }
+
+    public function deleteAsignarproveedores($detalle_id){
+        $detalle = DetalleArticulo::findOrFail($detalle_id);
+        $detalle->ind_confirmado = false;
+        $detalle->proveedor_id = null;
+        $detalle->save();
+        $data['vista'] = $this->getAsignarproveedores($detalle->articuloPresupuesto->presupuesto_id)->render();
+        $data['mensaje'] = "Se removió el proveedor correctamente";
+        return response()->json($data);
     }
 
 }

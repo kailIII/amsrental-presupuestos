@@ -2,6 +2,40 @@
 
 namespace App;
 
+/**
+ * App\Persona
+ *
+ * @property integer $id 
+ * @property string $rif 
+ * @property string $nombre 
+ * @property string $correo 
+ * @property string $telefono_oficina 
+ * @property string $telefono_fax 
+ * @property string $telefono_otro 
+ * @property string $direccion 
+ * @property boolean $ind_externo 
+ * @property string $tipo 
+ * @property string $deleted_at 
+ * @property \Carbon\Carbon $created_at 
+ * @property \Carbon\Carbon $updated_at 
+ * @property-read mixed $telefonos 
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\ArticuloProveedor[] $articuloProveedor 
+ * @property-read mixed $estatus_display 
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereRif($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereNombre($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereCorreo($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereTelefonoOficina($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereTelefonoFax($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereTelefonoOtro($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereDireccion($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereIndExterno($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereTipo($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereDeletedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Persona whereUpdatedAt($value)
+ * @method static \App\Persona filtrar($tipo)
+ */
 class Persona extends BaseModel implements Interfaces\SimpleTableInterface {
 
     protected $table = "personas";

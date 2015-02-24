@@ -4,6 +4,35 @@ namespace App;
 
 use App\Interfaces\DecimalInterface;
 
+/**
+ * App\ArticuloPresupuesto
+ *
+ * @property integer $id 
+ * @property integer $presupuesto_id 
+ * @property integer $articulo_id 
+ * @property string $descripcion 
+ * @property integer $cantidad 
+ * @property integer $dias 
+ * @property integer $orden 
+ * @property float $costo_venta 
+ * @property \Carbon\Carbon $created_at 
+ * @property \Carbon\Carbon $updated_at 
+ * @property-read \App\Presupuesto $presupuesto 
+ * @property-read \App\Articulo $articulo 
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\DetalleArticulo[] $detalleArticulos 
+ * @property-read mixed $costo_total 
+ * @property-read mixed $estatus_display 
+ * @method static \Illuminate\Database\Query\Builder|\App\ArticuloPresupuesto whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\ArticuloPresupuesto wherePresupuestoId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\ArticuloPresupuesto whereArticuloId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\ArticuloPresupuesto whereDescripcion($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\ArticuloPresupuesto whereCantidad($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\ArticuloPresupuesto whereDias($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\ArticuloPresupuesto whereOrden($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\ArticuloPresupuesto whereCostoVenta($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\ArticuloPresupuesto whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\ArticuloPresupuesto whereUpdatedAt($value)
+ */
 class ArticuloPresupuesto extends BaseModel implements DecimalInterface{
 
     protected $table = "articulo_presupuesto";

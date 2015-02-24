@@ -7,6 +7,31 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Interfaces\SimpleTableInterface;
 
+/**
+ * App\Articulo
+ *
+ * @property integer $id 
+ * @property string $nombre 
+ * @property integer $tipo_articulo_id 
+ * @property boolean $ind_excento 
+ * @property \Carbon\Carbon $deleted_at 
+ * @property \Carbon\Carbon $created_at 
+ * @property \Carbon\Carbon $updated_at 
+ * @property-read \App\TipoArticulo $tipoArticulo 
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\ArticuloProveedor')->with('proveedor[] $articuloProveedor 
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Persona[] $proveedores 
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Persona[] $proveedoresExternos 
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Persona[] $proveedoresInternos 
+ * @property-read mixed $disponibilidad 
+ * @property-read mixed $estatus_display 
+ * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereNombre($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereTipoArticuloId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereIndExcento($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereDeletedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereUpdatedAt($value)
+ */
 class Articulo extends BaseModel implements SimpleTableInterface {
 
     use SoftDeletes;
@@ -56,6 +81,10 @@ class Articulo extends BaseModel implements SimpleTableInterface {
         return $this->hasMany('App\ArticuloProveedor')->with('proveedor');
     }
 
+    public function proveedores(){
+        return $this->belongsToMany('App\Persona', 'articulo_proveedor', 'articulo_id', 'proveedor_id');
+    }
+
     public function proveedoresExternos() {
         return $this->belongsToMany('App\Persona', 'articulo_proveedor', 'articulo_id', 'proveedor_id')
             ->whereIndExterno(true);
@@ -77,13 +106,13 @@ class Articulo extends BaseModel implements SimpleTableInterface {
     }
 
     public function getDisponibilidad($fecDesde, $fecHasta, $pretty = true, $proveedor = null) {
-        $contExterno = $this->proveedoresExternos()->count();
+        $contExterno = $this->proveedoresExternos->count();
         if ($contExterno > 0 && $proveedor == null) {
             return $pretty ? "&infin;" : 99999;
         } else if ($proveedor != null && $proveedor->ind_externo) {
             return $pretty ? "&infin;" : 99999;
         }
-        $contPropio = $this->proveedoresInternos()->count();
+        $contPropio = $this->proveedoresInternos->count();
         if ($contPropio == 0) {
             return $pretty ? "No tiene proveedor" : 0;
         } else {
@@ -92,8 +121,8 @@ class Articulo extends BaseModel implements SimpleTableInterface {
             $cantOcupada = Presupuesto::join('articulo_presupuesto as b', 'presupuestos.id', '=', 'b.presupuesto_id')
                 ->join('detalle_articulos as c', 'b.id', '=', 'c.articulo_presupuesto_id')
                 ->join('personas as d', 'c.proveedor_id', '=', 'd.id')
-                ->where('presupuestos.fecha_montaje', '<=', $fecDesde->format('Y-m-d'))
-                ->where('presupuestos.fecha_evento', '>=', $fecHasta->format('Y-m-d'))
+                ->where('presupuestos.fecha_montaje','<', $fecHasta->format('Y-m-d'))
+                ->where('presupuestos.fecha_evento','>', $fecDesde->format('Y-m-d'))
                 ->where('d.ind_externo', '=', false)
                 ->where('b.articulo_id', '=', $this->id);
             if ($proveedor != null) {
@@ -106,12 +135,14 @@ class Articulo extends BaseModel implements SimpleTableInterface {
         }
     }
 
-    public function proveedoresDisponibles($fecha_desde, $fecha_hasta, $internos = true){
+    public function proveedoresDisponibles($fecha_desde, $fecha_hasta, $internos = true, $todos = false){
         $proveedoresDisp = new Collection();
-        if($internos){
+        if($internos && !$todos){
             $proveedores = $this->proveedoresInternos;
-        }else {
+        }else if(!$internos && !$todos){
             $proveedores = $this->proveedoresExternos;
+        }else{
+            $proveedores = $this->proveedores;
         }
         foreach($proveedores as $proveedor){
             if($this->getDisponibilidad($fecha_desde, $fecha_hasta, false, $proveedor)>0){
@@ -119,6 +150,10 @@ class Articulo extends BaseModel implements SimpleTableInterface {
             }
         }
         return $proveedoresDisp;
+    }
+
+    public function scopeEagerLoad($query){
+        return $query->with('tipoArticulo')->with('proveedoresInternos')->with('proveedoresExternos');
     }
 
 }

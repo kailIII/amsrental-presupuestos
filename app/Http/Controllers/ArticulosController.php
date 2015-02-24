@@ -26,7 +26,7 @@ class ArticulosController extends Controller {
      * @return Response
      */
     public function getIndex() {
-        $data['articulos'] = Articulo::with('tipoArticulo')->get();
+        $data['articulos'] = Articulo::eagerLoad()->get();
         return view('articulos.index', $data);
     }
 

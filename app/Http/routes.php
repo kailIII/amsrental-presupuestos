@@ -22,4 +22,5 @@ Route::controllers([
     'presupuestos' => 'PresupuestosController',
     'configuraciones' => 'ConfiguracionesController',
     'usuarios' => 'UsuariosController',
+    'detalle-articulos' => 'DetalleArticulosController',
 ]);

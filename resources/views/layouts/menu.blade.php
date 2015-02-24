@@ -49,13 +49,10 @@
                             {!!HTML::menu('presupuestos?estatus=3','dashboard','Aprobados')!!}
                         </li>
                         <li>
-                            {!!HTML::menu('presupuestos?estatus=4','dashboard','Finalizados')!!}
+                            {!!HTML::menu('presupuestos?estatus=4','dashboard','Pagados')!!}
                         </li>
                         <li>
-                            {!!HTML::menu('presupuestos?estatus=5','dashboard','Pagados')!!}
-                        </li>
-                        <li>
-                            {!!HTML::menu('presupuestos?estatus=6','dashboard','Anulados')!!}
+                            {!!HTML::menu('presupuestos?estatus=5','dashboard','Anulados')!!}
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
@@ -67,13 +64,7 @@
                             {!!HTML::menu('reportes/cpp','dashboard','Cuentas por Pagar')!!}
                         </li>
                         <li>
-                            {!!HTML::menu('reportes/cpc','dashboard','Cuentas por Cobrar')!!}
-                        </li>
-                        <li>
                             {!!HTML::menu('reportes/cyp','dashboard','Cuentas ya Pagadas')!!}
-                        </li>
-                        <li>
-                            {!!HTML::menu('reportes/cyc','dashboard','Cuentas ya Cobradas')!!}
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
