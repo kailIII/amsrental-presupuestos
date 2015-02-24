@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Helpers\Helper;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -183,9 +184,23 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
         return $str;
     }
 
-    public function scopeFiltrar($query, $estatus){
-        if(!is_null($estatus)){
-            return $query->whereEstatus($estatus);
+    public function scopeFiltrar($query, $filtros){
+        $fecha_desde = Carbon::now();
+        if(isset($filtros['estatus'])){
+            $query->whereEstatus($filtros['estatus']);
+        }
+        if(isset($filtros['evento'])){
+            if($filtros['evento']=="hoy"){
+                $fecha_hasta = $fecha_desde;
+            }else if($filtros['evento']=="semana"){
+                $fecha_hasta = Carbon::createFromTimestamp(strtotime('this week', time()))->addDays(6);
+            }else if($filtros['evento']=="mes"){
+                $fecha_hasta = $fecha_desde->copy()->lastOfMonth();
+            }else if($filtros['evento']=="pasados"){
+                $fecha_hasta = $fecha_desde->copy()->subDay();
+                $fecha_desde->subYears(100);
+            }
+            $query->where('fecha_evento','>=', $fecha_desde)->where('fecha_evento','<=', $fecha_hasta);
         }
         return $query;
     }

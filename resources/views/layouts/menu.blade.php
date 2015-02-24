@@ -28,31 +28,49 @@
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li>
-                    {!!HTML::menu('','dashboard','Dashboard')!!}
+                    {!!HTML::menu('','dashboard','Inicio')!!}
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-file-pdf-o fa-fw"></i> Presupuestos<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            {!!HTML::menu('presupuestos/modificar','dashboard','Nuevo')!!}
+                            {!!HTML::menu('presupuestos/modificar','plus','Nuevo')!!}
                         </li>
                         <li>
-                            {!!HTML::menu('presupuestos','dashboard','Todos')!!}
+                            {!!HTML::menu('presupuestos','search','Todos')!!}
                         </li>
                         <li>
-                            {!!HTML::menu('presupuestos?estatus=1','dashboard','En Elaboración')!!}
+                            {!!HTML::menu('presupuestos?estatus=1','paint-brush','En Elaboración')!!}
                         </li>
                         <li>
-                            {!!HTML::menu('presupuestos?estatus=2','dashboard','Esperando Aprobación')!!}
+                            {!!HTML::menu('presupuestos?estatus=2','spinner','Esperando Aprobación')!!}
                         </li>
                         <li>
-                            {!!HTML::menu('presupuestos?estatus=3','dashboard','Aprobados')!!}
+                            {!!HTML::menu('presupuestos?estatus=3','check','Aprobados')!!}
                         </li>
                         <li>
-                            {!!HTML::menu('presupuestos?estatus=4','dashboard','Pagados')!!}
+                            {!!HTML::menu('presupuestos?estatus=4','money','Pagados')!!}
                         </li>
                         <li>
                             {!!HTML::menu('presupuestos?estatus=5','dashboard','Anulados')!!}
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-truck fa-fw"></i> Eventos<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            {!!HTML::menu('presupuestos?evento=hoy','dashboard','Hoy')!!}
+                        </li>
+                        <li>
+                            {!!HTML::menu('presupuestos?evento=semana','dashboard','Esta Semana')!!}
+                        </li>
+                        <li>
+                            {!!HTML::menu('presupuestos?evento=mes','dashboard','Este mes')!!}
+                        </li>
+                        <li>
+                            {!!HTML::menu('presupuestos?evento=pasados','dashboard','Pasados')!!}
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
@@ -70,16 +88,16 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    {!!HTML::menu('personas?tipo=C','dashboard','Clientes')!!}
+                    {!!HTML::menu('personas?tipo=C','male','Clientes')!!}
                 </li>
                 <li>
-                    {!!HTML::menu('personas?tipo=P','dashboard','Proveedores')!!}
+                    {!!HTML::menu('personas?tipo=P','institution','Proveedores')!!}
                 </li>
                 <li>
-                    {!!HTML::menu('articulos','dashboard','Articulos')!!}
+                    {!!HTML::menu('articulos','cubes','Articulos')!!}
                 </li>
                 <li>
-                    {!!HTML::menu('tipo-articulos','dashboard','Tipos de Articulos')!!}
+                    {!!HTML::menu('tipo-articulos','cube','Tipos de Articulos')!!}
                 </li>
                 <li>
                     {!!HTML::menu('configuraciones','cog','Configuración')!!}

@@ -12,7 +12,7 @@
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <i class="fa fa-cubes fa-fw"></i>
+                <i class="fa fa-cogs fa-fw"></i>
                 Parámetros del sistema
             </div>
             <div class="panel-body">

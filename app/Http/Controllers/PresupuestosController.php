@@ -10,6 +10,7 @@ use App\Persona;
 use App\Presupuesto;
 use App\Articulo;
 use App\ArticuloPresupuesto;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,8 @@ class PresupuestosController extends Controller {
     }
 
     public function getIndex(Request $req){
-        $data['presupuestos'] = Presupuesto::eagerLoad()->filtrar($req->get('estatus',null))->get();
+        $data['presupuestos'] = Presupuesto::eagerLoad()->filtrar($req->all())->get();
+        $data['evento'] = $req->get('evento',null);
         $data['estatus'] = isset(Presupuesto::$estatuses[$req->get('estatus')]) ? Presupuesto::$estatuses[$req->get('estatus')]:'Todos';
         return view('presupuestos.index', $data);
     }

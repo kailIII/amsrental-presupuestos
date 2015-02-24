@@ -3,7 +3,11 @@
 @section('contenido')
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Listado de presupuestos ({{$estatus}})</h1>
+            @if(!is_null($evento))
+                <h1 class="page-header">Listado de eventos <strong>{{ucfirst($evento)}}</strong></h1>
+            @else
+                <h1 class="page-header">Listado de presupuestos <strong>({{$estatus}})</strong></h1>
+            @endif
         </div>
         <!-- /.col-lg-12 -->
     </div>

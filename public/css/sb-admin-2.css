@@ -353,6 +353,24 @@ table.dataTable thead .sorting:after {
     color: #df8a13;
 }
 
+.panel-light-blue {
+    border-color: #3399FF;
+}
+
+.panel-light-blue .panel-heading {
+    border-color: #3399FF;
+    color: #fff;
+    background-color: #3399FF;
+}
+
+.panel-light-blue a {
+    color: #3399FF;
+}
+
+.panel-light-blue a:hover {
+    color: #3366CC;
+}
+
 #contenedorEspera, #contenedorCorrecto, #contenedorError{
     z-index: 9999;
 }
