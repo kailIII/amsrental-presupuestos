@@ -96,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="{{url('pago-proveedores/pendiente')}}">
                     @include('footer_panel')
                 </a>
             </div>

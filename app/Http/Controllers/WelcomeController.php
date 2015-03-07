@@ -36,7 +36,7 @@ class WelcomeController extends Controller {
         $data['cant_presupuestos_aprobados'] = Presupuesto::where('estatus','>=',3)->count();
         $data['cant_presupuestos_enviados'] = Presupuesto::whereEstatus(2)->count();
         $data['cant_eventos_mes'] = Presupuesto::filtrar(['evento'=>'mes'])->count();
-        $data['monto_x_pagar'] = DetalleArticulo::whereNull('fecha_pago')->sum('costo_compra');
+        $data['monto_x_pagar'] = DetalleArticulo::whereNull('fecha_pago')->get()->sum('costo_total');
         $presupuestos = Presupuesto::whereEstatus(3)->get();
         $data['monto_x_cobrar'] = 0;
         $presupuestos->each(function (Presupuesto $presupuesto) use ($data){

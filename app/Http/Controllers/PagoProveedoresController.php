@@ -57,7 +57,7 @@ class PagoProveedoresController extends Controller {
         return redirect('pago-proveedores/detallependiente/'.$proveedor_id)->with('mensaje','Se marcaron los articulos como pagados correctamente');
     }
 
-    public function postPagado(Request $req){
+    public function postDetallepagado(Request $req){
         $proveedor_id = $req->get('proveedor_id');
         DetalleArticulo::marcarDevueltos($req->get('detalle_id',[]));
         return redirect('pago-proveedores/detallepagado/'.$proveedor_id)->with('mensaje','Se marcaron los articulos como no pagados correctamente');

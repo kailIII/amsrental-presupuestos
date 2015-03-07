@@ -15,7 +15,7 @@
                 </div>
                 <div class="panel-body">
                     @include('templates.mensaje')
-                    {!!Form::open(['url'=>'pago-proveedores/detallependiente'])!!}
+                    {!!Form::open(['url'=>'pago-proveedores/detallepagado'])!!}
                     {!!Form::hidden('proveedor_id',$proveedor->id)!!}
                     <table class="jqueryTable">
                         <thead>
