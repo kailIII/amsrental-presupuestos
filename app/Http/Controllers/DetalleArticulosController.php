@@ -39,6 +39,7 @@ class DetalleArticulosController extends Controller {
         $detalle = DetalleArticulo::findOrFail($req->get('detalle_id'));
         $detalle->proveedor()->associate($proveedor);
         $detalle->save();
+        $detalle->articuloPresupuesto->presupuesto->tratarArticulosConfirmados();
         $data['vista'] = $this->getAsignarproveedores($detalle->articuloPresupuesto->presupuesto_id)->render();
         $data['mensaje'] = "Se asignó el proveedor correctamente";
         return response()->json($data);

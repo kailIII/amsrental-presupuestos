@@ -5,22 +5,22 @@ namespace App;
 /**
  * App\Persona
  *
- * @property integer $id 
- * @property string $rif 
- * @property string $nombre 
- * @property string $correo 
- * @property string $telefono_oficina 
- * @property string $telefono_fax 
- * @property string $telefono_otro 
- * @property string $direccion 
- * @property boolean $ind_externo 
- * @property string $tipo 
- * @property string $deleted_at 
- * @property \Carbon\Carbon $created_at 
- * @property \Carbon\Carbon $updated_at 
- * @property-read mixed $telefonos 
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\ArticuloProveedor[] $articuloProveedor 
- * @property-read mixed $estatus_display 
+ * @property integer $id
+ * @property string $rif
+ * @property string $nombre
+ * @property string $correo
+ * @property string $telefono_oficina
+ * @property string $telefono_fax
+ * @property string $telefono_otro
+ * @property string $direccion
+ * @property boolean $ind_externo
+ * @property string $tipo
+ * @property string $deleted_at
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property-read mixed $telefonos
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\ArticuloProveedor[] $articuloProveedor
+ * @property-read mixed $estatus_display
  * @method static \Illuminate\Database\Query\Builder|\App\Persona whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Persona whereRif($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Persona whereNombre($value)
@@ -35,6 +35,9 @@ namespace App;
  * @method static \Illuminate\Database\Query\Builder|\App\Persona whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Persona whereUpdatedAt($value)
  * @method static \App\Persona filtrar($tipo)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\DetalleArticulo[] $articulosVendidos 
+ * @property-read mixed $deuda 
+ * @method static \App\Persona externos()
  */
 class Persona extends BaseModel implements Interfaces\SimpleTableInterface {
 
@@ -100,6 +103,10 @@ class Persona extends BaseModel implements Interfaces\SimpleTableInterface {
         return $query->whereTipo($tipo);
     }
 
+    public function scopeExternos($query){
+        return $query->filtrar('P')->whereIndExterno(true);
+    }
+
     public function getTableFields() {
         return [
             'rif', 'nombre', 'telefonos','correo'
@@ -108,6 +115,18 @@ class Persona extends BaseModel implements Interfaces\SimpleTableInterface {
 
     public function articuloProveedor() {
         return $this->hasMany('App\ArticuloProveedor', 'proveedor_id')->with('proveedor');
+    }
+
+    public function articulosVendidos(){
+        return $this->hasMany('App\DetalleArticulo','proveedor_id');
+    }
+
+    public function getDeudaAttribute(){
+        return $this->articulosVendidos()->whereNull('fecha_pago')->get()->sum('costo_total');
+    }
+
+    public function getPagadoAttribute(){
+        return $this->articulosVendidos()->whereNotNull('fecha_pago')->get()->sum('costo_total');
     }
 
     public static function comboClientes(){

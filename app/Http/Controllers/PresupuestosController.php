@@ -93,25 +93,25 @@ class PresupuestosController extends Controller {
     public function getAprobado($id){
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->aprobado();
-        return Redirect::to('presupuestos?estatus=3')->with('mensaje','Se marcó el presupuesto como aprobado correctamente.');
+        return Redirect::to('presupuestos?estatus='.$presupuesto->estatus)->with('mensaje','Se marcó el presupuesto como aprobado correctamente.');
     }
 
     public function getPagado($id){
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->pagado();
-        return Redirect::to('presupuestos?estatus=4')->with('mensaje','Se marcó el presupuesto como pagado correctamente.');
+        return Redirect::to('presupuestos?estatus=5')->with('mensaje','Se marcó el presupuesto como pagado correctamente.');
     }
 
     public function getAnular($id){
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->anular();
-        return Redirect::to('presupuestos?estatus=4')->with('mensaje','Se marcó el presupuesto como anulado correctamente.');
+        return Redirect::to('presupuestos?estatus=6')->with('mensaje','Se marcó el presupuesto como anulado correctamente.');
     }
 
     public function getReversar($id){
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->reversar();
-        return Redirect::to('presupuestos?estatus=3')->with('mensaje','Se marcó el presupuesto como aprobado correctamente.');
+        return Redirect::to('presupuestos?estatus=4')->with('mensaje','Se marcó el presupuesto como aprobado correctamente.');
     }
 
     public function getImprimir($id, $saveLocal=false){

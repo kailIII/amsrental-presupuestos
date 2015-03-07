@@ -5,11 +5,11 @@ namespace App;
 /**
  * App\TipoArticulo
  *
- * @property integer $id 
- * @property string $nombre 
- * @property \Carbon\Carbon $created_at 
- * @property \Carbon\Carbon $updated_at 
- * @property-read mixed $estatus_display 
+ * @property integer $id
+ * @property string $nombre
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property-read mixed $estatus_display
  * @method static \Illuminate\Database\Query\Builder|\App\TipoArticulo whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\TipoArticulo whereNombre($value)
  * @method static \Illuminate\Database\Query\Builder|\App\TipoArticulo whereCreatedAt($value)

@@ -25,7 +25,7 @@ use App\Interfaces\SimpleTableInterface;
  * @method static \Illuminate\Database\Query\Builder|\UnosGorditos\User whereRememberToken($value)
  * @method static \Illuminate\Database\Query\Builder|\UnosGorditos\User whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\UnosGorditos\User whereUpdatedAt($value)
- * @property-read mixed $estatus_display 
+ * @property-read mixed $estatus_display
  */
 class User extends BaseModel implements AuthenticatableContract, CanResetPasswordContract, SimpleTableInterface {
 

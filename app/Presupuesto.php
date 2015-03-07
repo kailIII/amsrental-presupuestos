@@ -9,26 +9,26 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * App\Presupuesto
  *
- * @property integer $id 
- * @property integer $cliente_id 
- * @property string $codigo 
- * @property integer $estatus 
- * @property \Carbon\Carbon $fecha_evento 
- * @property \Carbon\Carbon $fecha_montaje 
- * @property string $nombre_evento 
- * @property string $lugar_evento 
- * @property float $impuesto 
- * @property \Carbon\Carbon $deleted_at 
- * @property \Carbon\Carbon $created_at 
- * @property \Carbon\Carbon $updated_at 
- * @property-read \App\Persona $cliente 
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\ArticuloPresupuesto')->with('articulo')->orderBy('orden[] $articulos 
- * @property-read mixed $estatus_display 
- * @property-read mixed $sub_total 
- * @property-read mixed $monto_excento 
- * @property-read mixed $monto_iva 
- * @property-read mixed $monto_total 
- * @property-read mixed $detalle_costos 
+ * @property integer $id
+ * @property integer $cliente_id
+ * @property string $codigo
+ * @property integer $estatus
+ * @property \Carbon\Carbon $fecha_evento
+ * @property \Carbon\Carbon $fecha_montaje
+ * @property string $nombre_evento
+ * @property string $lugar_evento
+ * @property float $impuesto
+ * @property \Carbon\Carbon $deleted_at
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property-read \App\Persona $cliente
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\ArticuloPresupuesto')->with('articulo')->orderBy('orden[] $articulos
+ * @property-read mixed $estatus_display
+ * @property-read mixed $sub_total
+ * @property-read mixed $monto_excento
+ * @property-read mixed $monto_iva
+ * @property-read mixed $monto_total
+ * @property-read mixed $detalle_costos
  * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereClienteId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereCodigo($value)
@@ -43,6 +43,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|\App\Presupuesto whereUpdatedAt($value)
  * @method static \App\Presupuesto filtrar($estatus)
  * @method static \App\Presupuesto cargar()
+ * @method static \App\Presupuesto eagerLoad()
  */
 class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface {
 
@@ -99,8 +100,9 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
         '1'=>'Elaboracion',
         '2'=>'Esperando Aprobacion',
         '3'=>'Aprobado',
-        '4'=>'Pagado',
-        '5'=>'Anulado',
+        '4'=>'Articulos Confirmados',
+        '5'=>'Pagado',
+        '6'=>'Anulado',
     ];
 
     public function getPrettyName() {
@@ -211,18 +213,26 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
 
     public function aprobado(){
         $this->cambiarEstatus(2,3);
+        $this->tratarArticulosConfirmados();
+    }
+
+    public function tratarArticulosConfirmados(){
+        $pendiente = $this->detalles()->whereNull('proveedor_id')->count();
+        if($pendiente==0){
+            $this->cambiarEstatus(3,4);
+        }
     }
 
     public function pagado(){
-        $this->cambiarEstatus(3,4);
+        $this->cambiarEstatus(4,5);
     }
 
     public function reversar(){
-        $this->cambiarEstatus(4,3);
+        $this->cambiarEstatus(5,4);
     }
 
     public function anular(){
-        $this->cambiarEstatus([1,2,3],5);
+        $this->cambiarEstatus([1,2,3],6);
     }
 
     public function puedeModificar(){
@@ -238,11 +248,11 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
     }
 
     public function puedePagado(){
-        return $this->estatus == 3;
+        return $this->estatus == 4;
     }
 
     public function puedeReversar(){
-        return $this->estatus == 4;
+        return $this->estatus == 5;
     }
 
     public function puedeAnular(){
@@ -250,7 +260,7 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
     }
 
     public function puedeAsignarProveedor(){
-        return $this->estatus < 4;
+        return $this->estatus < 6;
     }
 
     private function cambiarEstatus($necesario, $nuevo){

@@ -5,17 +5,17 @@ use App\Interfaces\DecimalInterface;
 /**
  * App\DetalleArticulo
  *
- * @property integer $id 
- * @property integer $articulo_presupuesto_id 
- * @property integer $proveedor_id 
- * @property float $costo_compra 
- * @property boolean $ind_confirmado 
- * @property string $fecha_pago 
- * @property \Carbon\Carbon $created_at 
- * @property \Carbon\Carbon $updated_at 
- * @property-read \App\ArticuloPresupuesto $articuloPresupuesto 
- * @property-read \App\Persona $proveedor 
- * @property-read mixed $estatus_display 
+ * @property integer $id
+ * @property integer $articulo_presupuesto_id
+ * @property integer $proveedor_id
+ * @property float $costo_compra
+ * @property boolean $ind_confirmado
+ * @property string $fecha_pago
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property-read \App\ArticuloPresupuesto $articuloPresupuesto
+ * @property-read \App\Persona $proveedor
+ * @property-read mixed $estatus_display
  * @method static \Illuminate\Database\Query\Builder|\App\DetalleArticulo whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\DetalleArticulo whereArticuloPresupuestoId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\DetalleArticulo whereProveedorId($value)
@@ -82,6 +82,10 @@ class DetalleArticulo extends BaseModel implements DecimalInterface{
         return ['costo_compra'];
     }
 
+    public function getCostoTotalAttribute(){
+        return $this->costo_compra * $this->articuloPresupuesto->dias;
+    }
+
     public function removerProveedor(){
         $this->costo_compra = null;
         $this->ind_confirmado = false;
@@ -101,5 +105,29 @@ class DetalleArticulo extends BaseModel implements DecimalInterface{
             $this->tratarAsignarProveedor(false);
         }
         $this->save();
+    }
+
+    public function pagado(){
+        $this->fecha_pago = \Carbon::now();
+        $this->save();
+    }
+
+    public function devuelto(){
+        $this->fecha_pago = null;
+        $this->save();
+    }
+
+    public static function marcarDevueltos($detalles){
+        $detalles = DetalleArticulo::findMany($detalles);
+        $detalles->each(function($detalle){
+            $detalle->devuelto();
+        });
+    }
+
+    public static function marcarPagados($detalles){
+        $detalles = DetalleArticulo::findMany($detalles);
+        $detalles->each(function($detalle){
+            $detalle->pagado();
+        });
     }
 }

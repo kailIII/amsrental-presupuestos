@@ -30,13 +30,21 @@
                             <tr data-id="{{$detalle->id}}">
                                 <td>{{$detalle->articuloPresupuesto->articulo->nombre}}</td>
                                 <td>{{$detalle->articuloPresupuesto->costo_venta}}</td>
-                                <td>{!!Form::simple2($detalle, 'costo_compra', 12,'text', ['style'=>'width: 100%;'])!!}</td>
+                                <td>
+                                    @if($presupuesto->puedeAsignarProveedor())
+                                        {!!Form::simple2($detalle, 'costo_compra', 12,'text', ['style'=>'width: 100%;'])!!}
+                                    @else
+                                        {{\App\Helpers\Helper::tm($detalle->costo_compra)}}
+                                    @endif
+                                </td>
                                 <td>
                                     {{$detalle->proveedor->nombre or "No tiene"}}
-                                    @if(!is_object($detalle->proveedor))
-                                        <a class="btn btn-primary btn-xs asignar-proveedor" href="#" title="Asignar proveedor"><i class="fa fa-search"></i></a>
-                                    @else
-                                        <a class="btn btn-danger btn-xs quitar-proveedor" href="#"><i class="fa fa-remove"></i></a>
+                                    @if($presupuesto->puedeAsignarProveedor())
+                                        @if(!is_object($detalle->proveedor))
+                                            <a class="btn btn-primary btn-xs asignar-proveedor" href="#" title="Asignar proveedor"><i class="fa fa-search"></i></a>
+                                        @else
+                                            <a class="btn btn-danger btn-xs quitar-proveedor" href="#"><i class="fa fa-remove"></i></a>
+                                        @endif
                                     @endif
                                 </td>
                             </tr>

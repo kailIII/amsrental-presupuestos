@@ -11,7 +11,7 @@
                 <th>Nombre</th>
                 <th>Cant. Disp.</th>
                 <th>Costo Unitario</th>
-                <th>Remover</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -23,7 +23,7 @@
                 <td>{!!Form::simple2($artProveedor, 'costo_compra',12,'text', ['style'=>'width: 100%;'])!!}</td>
                 <td>
                     {!!Form::hidden('id', $artProveedor->id, ['id'=>'id'])!!}
-                    <a class="btn fa fa-arrow-left fa-2x" title="Remover" data-id="{{$artProveedor->id}}"></a>
+                    <a class="btn fa fa-arrow-left" title="Remover" data-id="{{$artProveedor->id}}"></a>
                 </td>
             </tr>
             @endforeach

@@ -49,10 +49,13 @@
                             {!!HTML::menu('presupuestos?estatus=3','check','Aprobados')!!}
                         </li>
                         <li>
-                            {!!HTML::menu('presupuestos?estatus=4','money','Pagados')!!}
+                            {!!HTML::menu('presupuestos?estatus=4','check','Articulos Confirmados')!!}
                         </li>
                         <li>
-                            {!!HTML::menu('presupuestos?estatus=5','dashboard','Anulados')!!}
+                            {!!HTML::menu('presupuestos?estatus=5','money','Pagados')!!}
+                        </li>
+                        <li>
+                            {!!HTML::menu('presupuestos?estatus=6','remove','Anulados')!!}
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
@@ -76,13 +79,13 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Reportes<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Pago a Proveedores<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            {!!HTML::menu('reportes/cpp','dashboard','Cuentas por Pagar')!!}
+                            {!!HTML::menu('pago-proveedores/pendiente','money','Cuentas por Pagar')!!}
                         </li>
                         <li>
-                            {!!HTML::menu('reportes/cyp','dashboard','Cuentas ya Pagadas')!!}
+                            {!!HTML::menu('pago-proveedores/pagado','money','Cuentas ya Pagadas')!!}
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->

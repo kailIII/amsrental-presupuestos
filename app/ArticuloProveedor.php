@@ -5,16 +5,16 @@ namespace App;
 /**
  * App\ArticuloProveedor
  *
- * @property integer $id 
- * @property integer $articulo_id 
- * @property integer $proveedor_id 
- * @property integer $cantidad 
- * @property float $costo_compra 
- * @property \Carbon\Carbon $created_at 
- * @property \Carbon\Carbon $updated_at 
- * @property-read \App\Articulo $articulo 
- * @property-read \App\Persona $proveedor 
- * @property-read mixed $estatus_display 
+ * @property integer $id
+ * @property integer $articulo_id
+ * @property integer $proveedor_id
+ * @property integer $cantidad
+ * @property float $costo_compra
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property-read \App\Articulo $articulo
+ * @property-read \App\Persona $proveedor
+ * @property-read mixed $estatus_display
  * @method static \Illuminate\Database\Query\Builder|\App\ArticuloProveedor whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\ArticuloProveedor whereArticuloId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\ArticuloProveedor whereProveedorId($value)

@@ -71,9 +71,7 @@
                                     @if($presupuesto->puedeReversar())
                                         <a class="btn btn-xs btn-primary fa fa-undo" title="Reversar Pago" href="{{url('presupuestos/reversar/'.$presupuesto->id)}}"></a>
                                     @endif
-                                    @if($presupuesto->puedeAsignarProveedor())
-                                        <a class="btn btn-xs btn-primary fa fa-list" title="Asignar Proveedores" href="{{url('detalle-articulos/asignarproveedores/'.$presupuesto->id)}}"></a>
-                                    @endif
+                                    <a class="btn btn-xs btn-primary fa fa-list" title="Asignar Proveedores" href="{{url('detalle-articulos/asignarproveedores/'.$presupuesto->id)}}"></a>
                                 </td>
                             </tr>
                         @endforeach

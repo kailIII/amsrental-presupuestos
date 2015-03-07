@@ -10,20 +10,20 @@ use App\Interfaces\SimpleTableInterface;
 /**
  * App\Articulo
  *
- * @property integer $id 
- * @property string $nombre 
- * @property integer $tipo_articulo_id 
- * @property boolean $ind_excento 
- * @property \Carbon\Carbon $deleted_at 
- * @property \Carbon\Carbon $created_at 
- * @property \Carbon\Carbon $updated_at 
- * @property-read \App\TipoArticulo $tipoArticulo 
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\ArticuloProveedor')->with('proveedor[] $articuloProveedor 
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Persona[] $proveedores 
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Persona[] $proveedoresExternos 
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Persona[] $proveedoresInternos 
- * @property-read mixed $disponibilidad 
- * @property-read mixed $estatus_display 
+ * @property integer $id
+ * @property string $nombre
+ * @property integer $tipo_articulo_id
+ * @property boolean $ind_excento
+ * @property \Carbon\Carbon $deleted_at
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property-read \App\TipoArticulo $tipoArticulo
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\ArticuloProveedor')->with('proveedor[] $articuloProveedor
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Persona[] $proveedores
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Persona[] $proveedoresExternos
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Persona[] $proveedoresInternos
+ * @property-read mixed $disponibilidad
+ * @property-read mixed $estatus_display
  * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereNombre($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereTipoArticuloId($value)
@@ -31,6 +31,7 @@ use App\Interfaces\SimpleTableInterface;
  * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereDeletedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Articulo whereUpdatedAt($value)
+ * @method static \App\Articulo eagerLoad()
  */
 class Articulo extends BaseModel implements SimpleTableInterface {
 
