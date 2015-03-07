@@ -128,7 +128,6 @@ return [
         'App\Providers\RouteServiceProvider',
         'App\Providers\HtmlServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
-        'Barryvdh\Debugbar\ServiceProvider',
     ],
     /*
       |--------------------------------------------------------------------------
@@ -175,7 +174,6 @@ return [
         'View' => 'Illuminate\Support\Facades\View',
         'Form' => 'Illuminate\Html\FormFacade',
         'HTML' => 'Illuminate\Html\HtmlFacade',
-        'Debugbar' => 'Barryvdh\Debugbar\Facade',
         'Carbon' => 'Carbon\Carbon',
     ],
 ];
