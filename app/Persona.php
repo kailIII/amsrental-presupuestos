@@ -35,9 +35,10 @@ namespace App;
  * @method static \Illuminate\Database\Query\Builder|\App\Persona whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Persona whereUpdatedAt($value)
  * @method static \App\Persona filtrar($tipo)
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\DetalleArticulo[] $articulosVendidos 
- * @property-read mixed $deuda 
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\DetalleArticulo[] $articulosVendidos
+ * @property-read mixed $deuda
  * @method static \App\Persona externos()
+ * @property-read mixed $pagado 
  */
 class Persona extends BaseModel implements Interfaces\SimpleTableInterface {
 
@@ -96,7 +97,7 @@ class Persona extends BaseModel implements Interfaces\SimpleTableInterface {
     }
 
     public function getPrettyName() {
-        return "personas";
+        return "Persona";
     }
 
     public function scopeFiltrar($query, $tipo) {

@@ -64,78 +64,11 @@ abstract class BaseModel extends Model implements SelectInterface, SimpleTableIn
         $this->validator = \App::make('validator');
     }
 
-    /**
-     * Nos registramos para los listener de laravel
-     * si un hijo desea usar uno debe sobreescribir el metodo.
-     * Docs: @link http://laravel.com/docs/eloquent#model-events
-     */
-    protected static function boot() {
-        parent::boot();
-        $object = new static();
-        if(method_exists($object, 'creatingModel')){
-            static::creating(function($model) {
-                return $model->creatingModel($model);
-            });
-        }
-        if(method_exists($object, 'createdModel')){
-            static::created(function($model) {
-                return $model->createdModel($model);
-            });
-        }
-        if(method_exists($object, 'updatingModel')){
-            static::updating(function($model) {
-                return $model->updatingModel($model);
-            });
-        }
-        if(method_exists($object, 'updatedModel')){
-            static::updated(function($model) {
-                return $model->updatedModel($model);
-            });
-        }
-        if(method_exists($object, 'savingModel')){
-            static::saving(function($model) {
-                return $model->savingModel($model);
-            });
-        }
-        if(method_exists($object, 'savedModel')){
-            static::saved(function($model) {
-                return $model->savedModel($model);
-            });
-        }
-        if(method_exists($object, 'deletingModel')){
-            static::deleting(function($model) {
-                return $model->deletingModel($model);
-            });
-        }
-        if(method_exists($object, 'deletedModel')){
-            static::deleted(function($model) {
-                return $model->deletedModel($model);
-            });
-        }
-    }
-
     public static function create(array $attributes) {
         $model = new static();
         $model->fill($attributes);
         $model->save();
         return $model;
-    }
-
-
-    /**
-     * Metodo que se ejecuta al ejecutar el metodo save del objeto
-     * si retorna false no se guardan los cambios en la BD
-     * Por defecto llama al metodo validate.
-     * Docs: @link http://laravel.com/docs/eloquent#model-events
-     * @return boolean
-     */
-    public function savingModel($model)
-    {
-        if (!isset($model->id) && method_exists($this, 'getDefaultValues')) {
-            $default = $model->getDefaultValues();
-            $model->attributes = array_merge($default, $this->attributes);
-        }
-        return $this->validate($model);
     }
 
     /**
@@ -165,7 +98,7 @@ abstract class BaseModel extends Model implements SelectInterface, SimpleTableIn
     /**
      * Validates current attributes against rules
      */
-    public function validate($model = null) {
+    public function validate() {
         $v = $this->validator->make($this->attributes, $this->getRules());
         $v->setAttributeNames($this->getPrettyFields());
         if ($v->passes()) {

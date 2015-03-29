@@ -76,6 +76,25 @@ $(function () {
             });
         }
     });
+
+    $(document).on('click', '.btn-volver', function (evt) {
+        var urlAtras = location.href;
+        sect = urlAtras.split('?')[0].split('/');
+        if (!isNaN(sect[sect.length - 1])) {
+            delete sect[sect.length - 1];
+            delete sect[sect.length - 2];
+        } else {
+            delete sect[sect.length - 1];
+        }
+        var url = sect.join('/');
+        url = url.slice(0, -1);
+        if (url.endsWith("/")) {
+            url = url.slice(0, -1);
+        }
+        location.href = url;
+    });
+
+
     $(".decimal-format").autoNumeric('init', {
         aSep: ".",
         aDec: ","

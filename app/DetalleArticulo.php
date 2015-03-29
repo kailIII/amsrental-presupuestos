@@ -24,6 +24,7 @@ use App\Interfaces\DecimalInterface;
  * @method static \Illuminate\Database\Query\Builder|\App\DetalleArticulo whereFechaPago($value)
  * @method static \Illuminate\Database\Query\Builder|\App\DetalleArticulo whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\DetalleArticulo whereUpdatedAt($value)
+ * @property-read mixed $costo_total 
  */
 class DetalleArticulo extends BaseModel implements DecimalInterface{
 

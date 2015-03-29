@@ -128,30 +128,4 @@ class ArticuloPresupuesto extends BaseModel implements DecimalInterface{
             }
         }
     }
-
-    public function savingModel($model){
-        if($this->isDirty('cantidad')){
-            $actuales = $this->detalleArticulos()->count();
-            if($this->cantidad>=$actuales){
-                for($i = $actuales; $i<$this->cantidad; $i++){
-                    $detalle = DetalleArticulo::create(['articulo_presupuesto_id'=>$this->id]);
-                    $detalle->tratarAsignarProveedor();
-                }
-            }else{
-                $detalles = $this->detalleArticulos()->take($actuales-$this->cantidad)->get();
-                $detalles->each(function($detalle){
-                    $detalle->delete();
-                });
-                $detalles = $this->detalleArticulos;
-                $detalles->each(function($detalle){
-                    $detalle->tratarAsignarProveedor();
-                });
-            }
-        }
-        return parent::savingModel($model);
-    }
-
-    public function deletingModel(){
-        $this->detalleArticulos()->delete();
-    }
 }

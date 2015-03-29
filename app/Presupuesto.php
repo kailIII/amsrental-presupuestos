@@ -75,8 +75,8 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
             'cliente_id' => 'required|integer',
             'codigo' => 'required',
             'estatus' => 'required|integer',
-            'fecha_evento' => 'required|date|after:'.$this->fecha_montaje,
-            'fecha_montaje' => 'required|date|before:'.$this->fecha_evento,
+            'fecha_evento' => 'required|date'.($this->fecha_montaje != null ? ('|after:'.$this->fecha_montaje):''),
+            'fecha_montaje' => 'required|date'.($this->fecha_evento != null ? ('|before:'.$this->fecha_evento):''),
             'nombre_evento' => 'required',
             'lugar_evento' => 'required',
             'impuesto' => 'required',
@@ -126,11 +126,20 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
     }
 
     public function setFechaEventoAttribute($param) {
-        $this->attributes['fecha_evento'] = \Carbon::createFromFormat('d/m/Y', $param);
+        try{
+            $this->attributes['fecha_evento'] = \Carbon::createFromFormat('d/m/Y', $param);
+        }catch (\InvalidArgumentException $e){
+            $this->attributes['fecha_evento'] = null;
+        }
+
     }
 
     public function setFechaMontajeAttribute($param) {
-        $this->attributes['fecha_montaje'] = \Carbon::createFromFormat('d/m/Y', $param);
+        try{
+            $this->attributes['fecha_montaje'] = \Carbon::createFromFormat('d/m/Y', $param);
+        }catch (\InvalidArgumentException $e){
+            $this->attributes['fecha_montaje'] = null;
+        }
     }
 
     public function getDefaultValues() {

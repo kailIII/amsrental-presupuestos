@@ -4,10 +4,10 @@
     <table cellspacing="0" style="width: 100%; text-align: right; font-size: 16px">
         <tr>
             <td style="width: 45%; color: #444444;" rowspan="2">
-                <img style="width: 100%;" src="{{url('/')}}/images/logo.jpg" alt="Logo">
+                <img style="width: 100%;" src="{{url('/')}}/images/logo.png" alt="Logo">
             </td>
             <td style="width: 45%; color: #444444;">
-                <strong>COTIZACION N° {{$presupuesto->codigo}}</strong>
+                <strong>COTIZACIÓN N° {{$presupuesto->codigo}}</strong>
             </td>
         </tr>
         <tr>
@@ -52,7 +52,7 @@
     <br>
     <table cellspacing="0" style="width: 100%; text-align: center; font-size: 10pt;">
         <tr>
-            <th style="width: 8%;border-bottom: 1px;border-top: 1px;border-left: 1px;">Codigo</th>
+            <th style="width: 8%;border-bottom: 1px;border-top: 1px;border-left: 1px;">Código</th>
             <th style="width: 46%;border-bottom: 1px;border-top: 1px;border-left: 1px;">Descripción</th>
             <th style="width: 8%;border-bottom: 1px;border-top: 1px;border-left: 1px;">Cant</th>
             <th style="width: 8%;border-bottom: 1px;border-top: 1px;border-left: 1px;">Dias</th>
@@ -97,6 +97,5 @@
     </nobreak>
     <page_footer>
         {!!\App\Configuracion::get('footer_presupuesto')!!}
-
     </page_footer>
 </page>

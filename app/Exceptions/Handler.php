@@ -23,7 +23,8 @@ class Handler extends ExceptionHandler {
 	 * @return void
 	 */
 	public function report(Exception $e)
-	{
+    {
+        \DB::rollBack();
 		return parent::report($e);
 	}
 
