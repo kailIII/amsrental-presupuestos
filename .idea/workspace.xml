@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbdc8c81-ff0a-4abf-b90c-ab61a503f75f" name="Default" comment="Asignacion automatica de proveedores a articulos">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Events/Models/ArticuloPresupuestoObserver.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Events/Models/BaseObserver.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/ObserversServiceProvider.php" />
-      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\.env.example" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\public\images\logo.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ArticuloPresupuesto.php" afterPath="$PROJECT_DIR$/app/ArticuloPresupuesto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/BaseModel.php" afterPath="$PROJECT_DIR$/app/BaseModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/DetalleArticulo.php" afterPath="$PROJECT_DIR$/app/DetalleArticulo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Persona.php" afterPath="$PROJECT_DIR$/app/Persona.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Presupuesto.php" afterPath="$PROJECT_DIR$/app/Presupuesto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_ide_helper.php" afterPath="$PROJECT_DIR$/_ide_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/reportes/html2pdf/presupuesto.blade.php" afterPath="$PROJECT_DIR$/resources/views/reportes/html2pdf/presupuesto.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sb-admin-2.js" afterPath="$PROJECT_DIR$/public/js/sb-admin-2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/autoload.php" afterPath="$PROJECT_DIR$/bootstrap/autoload.php" />
     </list>
     <ignored path="amsrentalv2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,7 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/emails/presupuesto.blade.php" />
         <option value="$PROJECT_DIR$/config/mail.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_02_07_135015_create_detalle_articulos_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/UsuariosTableSeeder.php" />
@@ -148,6 +129,7 @@
         <option value="$PROJECT_DIR$/resources/views/reportes/html2pdf/presupuesto.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
+        <option value="$PROJECT_DIR$/bootstrap/autoload.php" />
       </list>
     </option>
   </component>
@@ -199,38 +181,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="amsrentalv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amsrentalv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amsrentalv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amsrentalv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amsrentalv2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exceptions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -404,13 +354,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="952">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArticulosController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1530">
@@ -815,6 +758,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3985849" vertical-offset="392" max-vertical-offset="816">
           <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8419811" vertical-offset="102" max-vertical-offset="697">
+          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
           <folding />
         </state>
       </provider>
