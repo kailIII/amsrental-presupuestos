@@ -7,6 +7,7 @@
             <h3 class="panel-title">Inicio de sesión</h3>
         </div>
         <div class="panel-body">
+            <img src="{{url('images/logo.png')}}" class="img-responsive">
             @include('templates.errores')
             {!!Form::model(new App\User(), ['url'=>'auth/login','role'=>'form'])!!}
             {!!Form::simple('email')!!}

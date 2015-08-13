@@ -7,6 +7,7 @@ use App\Configuracion;
 use App\DetalleArticulo;
 use App\Events\Models\ArticuloPresupuestoObserver;
 use App\Events\Models\BaseObserver;
+use App\Events\Models\PresupuestoObserver;
 use App\Persona;
 use App\Presupuesto;
 use App\TipoArticulo;
@@ -28,7 +29,7 @@ class ObserversServiceProvider extends ServiceProvider {
         Configuracion::observe(new BaseObserver());
         DetalleArticulo::observe(new BaseObserver());
         Persona::observe(new BaseObserver());
-        Presupuesto::observe(new BaseObserver());
+        Presupuesto::observe(new PresupuestoObserver());
         TipoArticulo::observe(new BaseObserver());
         User::observe(new BaseObserver());
 	}

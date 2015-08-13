@@ -142,6 +142,8 @@ class PresupuestosController extends Controller {
         $this->getImprimir($request->get('id'), true);
         $data['mensaje'] = $request->get('mensaje');
         \Mail::send('emails.presupuesto', $data, function($message) use ($request) {
+            $from = Configuracion::get('remitente-correo', 'Remitente de los correos a enviar');
+            $message->from($from);
             $message->to($request->get('correo'))->subject($request->get('asunto'))->cc(\Auth::user()->email);
             $message->attach(storage_path('app/presupuesto.pdf'));
         });

@@ -144,8 +144,11 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
 
     public function getDefaultValues() {
         $fechaCar = \Carbon::now();
-        $numero = Presupuesto::whereRaw('YEAR(created_at)=YEAR(NOW())')->count()+1;
-        $codigo = "P-" . $fechaCar->format('my'). '-' . $numero;
+        $proximo = Configuracion::get('nro-presupuesto-'.$fechaCar->year);
+        if($proximo==""){
+            $proximo=1;
+        }
+        $codigo = "P-" . $fechaCar->format('my'). '-' . $proximo;
         return [
             'estatus' => 1,
             'codigo' =>$codigo,
