@@ -1,7 +1,0 @@
-/**
-* Define una relación tiene muchos @model_name@
-* @return @model_name@
-*/
-public function @function_name@(){
-    return $this->hasMany('@model_name@');
-}

@@ -2,6 +2,8 @@
 
 namespace App\Helpers;
 
+use Doctrine\Instantiator\Exception\InvalidArgumentException;
+
 class Helper {
 
     static function strPluralSpanish($word) {

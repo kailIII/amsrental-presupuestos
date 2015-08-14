@@ -6,6 +6,7 @@ use App\Helpers\Helper;
 use App\Interfaces\SelectInterface;
 use App\Interfaces\SimpleTableInterface;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\MessageBag;
 
 /**
  * Description of BaseModel
@@ -28,7 +29,6 @@ abstract class BaseModel extends Model implements SelectInterface, SimpleTableIn
      */
     protected $appends = [];
     protected $dates = [];
-    protected $manejaConcurrencia;
     protected $displayTable = [];
 
     /**
@@ -51,20 +51,14 @@ abstract class BaseModel extends Model implements SelectInterface, SimpleTableIn
         '0' => 'No',
         '1' => 'Si'
     ];
-    protected static $estatusArray = [
-        'ELA' => 'Elaboración',
-        'ELD' => 'Departamento Asignado',
-        'REF' => 'Referenciada',
-        'EPR' => 'Esperando Aprobación',
-    ];
 
     public function __construct(array $attributes = []) {
         parent::__construct($attributes);
-        $this->errors = new \Illuminate\Support\MessageBag();
+        $this->errors = new MessageBag();
         $this->validator = \App::make('validator');
     }
 
-    public static function create(array $attributes) {
+    public static function create(array $attributes = []) {
         $model = new static();
         $model->fill($attributes);
         $model->save();

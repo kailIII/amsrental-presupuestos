@@ -13,8 +13,7 @@ class Kernel extends ConsoleKernel {
      * @var array
      */
     protected $commands = [
-        'App\Console\Commands\Inspire',
-        'App\Console\Commands\GenerarModelos',
+
     ];
 
     /**
@@ -24,8 +23,7 @@ class Kernel extends ConsoleKernel {
      * @return void
      */
     protected function schedule(Schedule $schedule) {
-        $schedule->command('inspire')
-                ->hourly();
+
     }
 
 }

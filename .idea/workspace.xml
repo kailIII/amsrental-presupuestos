@@ -1,7 +1,392 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dbdc8c81-ff0a-4abf-b90c-ab61a503f75f" name="Default" comment="Asignacion automatica de proveedores a articulos" />
+    <list default="true" id="dbdc8c81-ff0a-4abf-b90c-ab61a503f75f" name="Default" comment="Asignacion automatica de proveedores a articulos">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/ZarBold.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/ZarBold.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/almohanad.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/almohanad.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusans.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusans.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensed.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensed.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensedb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensedb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensedbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensedbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensedi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensedi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmono.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmono.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmonob.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmonob.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmonobi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmonobi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmonoi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmonoi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserif.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserif.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensed.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensed.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensedb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensedb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensedbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensedbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensedi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensedi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemono.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemono.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemonob.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemonob.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemonobi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemonobi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemonoi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemonoi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesans.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesans.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesansb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesansb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesansbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesansbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesansi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesansi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserif.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserif.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserifb.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserifb.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserifbi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserifbi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserifi.ctg.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserifi.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/freetype6.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/src/pfm2afm-src.tar.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/pfm2afm.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/pfm2afm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/tcpdf.fdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/src/ttf2ufm-src.tar.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/ttf2ufm.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/ttf2ufm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/zlib1.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Console/Commands/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Jobs/Job.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Commands\Command.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Console\Commands\GenerarModelos.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Console\Commands\Inspire.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\ZarBold.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\ZarBold.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\almohanad.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\almohanad.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusans.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusans.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansb.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansb.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansbi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansbi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensed.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensed.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensedb.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensedb.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensedbi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensedbi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensedi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensedi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmono.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmono.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmonob.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmonob.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmonobi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmonobi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmonoi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmonoi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserif.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserif.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifb.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifb.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifbi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifbi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensed.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensed.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensedb.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensedb.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensedbi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensedbi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensedi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensedi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemono.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemono.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemonob.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemonob.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemonobi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemonobi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemonoi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemonoi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesans.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesans.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesansb.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesansb.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesansbi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesansbi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesansi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesansi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserif.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserif.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserifb.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserifb.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserifbi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserifbi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserifi.ctg.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserifi.z" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\freetype6.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\pfm2afm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\pfm2afm.exe" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\src\pfm2afm-src.tar.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\src\ttf2ufm-src.tar.gz" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\ttf2ufm" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\ttf2ufm.exe" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\zlib1.dll" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\tcpdf.fdf" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Providers\BusServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Providers\ConfigServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\SchemaHelper\BelongsTo.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\SchemaHelper\Column.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\SchemaHelper\HasMany.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\SchemaHelper\Table.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\SchemaHelper\Template.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\app.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\alerts.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\badges.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\bootstrap.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\breadcrumbs.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\button-groups.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\buttons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\carousel.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\close.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\code.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\component-animations.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\dropdowns.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\forms.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\glyphicons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\grid.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\input-groups.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\jumbotron.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\labels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\list-group.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\media.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\alerts.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\background-variant.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\border-radius.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\buttons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\center-block.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\clearfix.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\forms.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\gradients.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\grid-framework.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\grid.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\hide-text.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\image.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\labels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\list-group.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\nav-divider.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\nav-vertical-align.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\opacity.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\pagination.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\panels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\progress-bar.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\reset-filter.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\resize.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\responsive-visibility.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\size.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\tab-focus.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\table-row.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\text-emphasis.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\text-overflow.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\mixins\vendor-prefixes.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\modals.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\navbar.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\navs.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\normalize.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\pager.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\pagination.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\panels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\popovers.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\print.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\progress-bars.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\responsive-embed.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\responsive-utilities.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\scaffolding.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\tables.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\theme.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\thumbnails.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\tooltip.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\type.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\utilities.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\variables.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\assets\less\bootstrap\wells.less" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_class\exception.class.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_class/exception.class.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_class\locale.class.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_class/locale.class.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_class\myPdf.class.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_class/myPdf.class.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_class\parsingCss.class.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_class/parsingCss.class.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_class\parsingHtml.class.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_class/parsingHtml.class.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_class\tcpdfConfig.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_class/tcpdfConfig.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\2dbarcodes.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/2dbarcodes.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\CHANGELOG.TXT" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/CHANGELOG.TXT" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\LICENSE.TXT" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/LICENSE.TXT" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\README.TXT" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/README.TXT" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\barcodes.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/barcodes.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\cache\chapter_demo_1.txt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/cache/chapter_demo_1.txt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\cache\chapter_demo_2.txt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/cache/chapter_demo_2.txt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\cache\table_data_demo.txt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/cache/table_data_demo.txt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\cache\utf8test.txt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/cache/utf8test.txt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\config\lang\bra.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/config/lang/bra.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\config\lang\eng.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/config/lang/eng.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\config\lang\ger.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/config/lang/ger.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\config\lang\ita.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/config/lang/ita.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\config\tcpdf_config.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/config/tcpdf_config.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\config\tcpdf_config_alt.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/config/tcpdf_config_alt.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\doc\read_me.txt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/doc/read_me.txt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\examples\read_me.txt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/examples/read_me.txt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\README.TXT" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/README.TXT" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\almohanad.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/almohanad.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\arialunicid0.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/arialunicid0.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\courier.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/courier.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\AUTHORS" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavu-fonts-ttf-2.30/AUTHORS" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\BUGS" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavu-fonts-ttf-2.30/BUGS" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\LICENSE" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavu-fonts-ttf-2.30/LICENSE" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\NEWS" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavu-fonts-ttf-2.30/NEWS" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\README" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavu-fonts-ttf-2.30/README" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\langcover.txt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavu-fonts-ttf-2.30/langcover.txt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\status.txt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavu-fonts-ttf-2.30/status.txt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavu-fonts-ttf-2.30\unicover.txt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavu-fonts-ttf-2.30/unicover.txt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusans.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusans.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansb.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansb.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansbi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansbi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensed.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensed.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensedb.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensedb.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensedbi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensedbi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusanscondensedi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusanscondensedi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmono.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmono.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmonob.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmonob.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmonobi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmonobi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavusansmonoi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavusansmonoi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserif.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserif.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifb.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifb.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifbi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifbi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensed.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensed.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensedb.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensedb.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensedbi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensedbi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifcondensedi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifcondensedi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\dejavuserifi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/dejavuserifi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freefont-20090104\AUTHORS" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freefont-20090104/AUTHORS" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freefont-20090104\COPYING" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freefont-20090104/COPYING" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freefont-20090104\CREDITS" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freefont-20090104/CREDITS" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freefont-20090104\ChangeLog" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freefont-20090104/ChangeLog" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freefont-20090104\INSTALL" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freefont-20090104/INSTALL" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freefont-20090104\README" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freefont-20090104/README" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemono.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemono.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemonob.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemonob.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemonobi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemonobi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freemonoi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freemonoi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesans.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesans.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesansb.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesansb.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesansbi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesansbi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freesansi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freesansi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserif.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserif.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserifb.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserifb.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserifbi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserifbi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\freeserifi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/freeserifi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\helvetica.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/helvetica.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\helveticab.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/helveticab.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\helveticabi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/helveticabi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\helveticai.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/helveticai.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\hysmyeongjostdmedium.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/hysmyeongjostdmedium.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\kozgopromedium.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/kozgopromedium.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\kozminproregular.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/kozminproregular.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\msungstdlight.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/msungstdlight.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\stsongstdlight.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/stsongstdlight.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\symbol.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/symbol.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\times.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/times.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\timesb.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/timesb.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\timesbi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/timesbi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\timesi.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/timesi.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\uni2cid_ac15.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/uni2cid_ac15.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\uni2cid_ag15.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/uni2cid_ag15.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\uni2cid_aj16.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/uni2cid_aj16.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\uni2cid_ak12.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/uni2cid_ak12.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\README.TXT" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/README.TXT" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\cp1250.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/cp1250.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\cp1251.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/cp1251.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\cp1252.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/cp1252.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\cp1253.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/cp1253.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\cp1254.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/cp1254.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\cp1255.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/cp1255.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\cp1257.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/cp1257.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\cp1258.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/cp1258.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\cp874.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/cp874.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-1.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/iso-8859-1.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-11.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/iso-8859-11.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-15.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/iso-8859-15.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-16.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/iso-8859-16.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-2.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/iso-8859-2.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-4.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/iso-8859-4.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-5.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/iso-8859-5.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-7.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/iso-8859-7.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\iso-8859-9.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/iso-8859-9.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\koi8-r.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/koi8-r.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\enc\koi8-u.map" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/enc/koi8-u.map" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\makeallttffonts.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/makeallttffonts.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\makefont.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/makefont.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\utils\src\readme.txt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/utils/src/readme.txt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\zapfdingbats.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/zapfdingbats.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\fonts\zarbold.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/fonts/zarbold.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\htmlcolors.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/htmlcolors.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\images\read_me.txt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/images/read_me.txt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\qrcode.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/qrcode.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\tcpdf.crt" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/tcpdf.crt" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\tcpdf.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/tcpdf.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\_tcpdf_5.0.002\unicode_data.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/_tcpdf_5.0.002/unicode_data.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\html2pdf.class.php" afterPath="$PROJECT_DIR$/app/Helpers/pdf/html2pdf.class.php" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\locale\ca.csv" afterPath="$PROJECT_DIR$/app/Helpers/pdf/locale/ca.csv" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\locale\cs.csv" afterPath="$PROJECT_DIR$/app/Helpers/pdf/locale/cs.csv" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\locale\da.csv" afterPath="$PROJECT_DIR$/app/Helpers/pdf/locale/da.csv" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\locale\de.csv" afterPath="$PROJECT_DIR$/app/Helpers/pdf/locale/de.csv" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\locale\en.csv" afterPath="$PROJECT_DIR$/app/Helpers/pdf/locale/en.csv" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\locale\es.csv" afterPath="$PROJECT_DIR$/app/Helpers/pdf/locale/es.csv" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\locale\fr.csv" afterPath="$PROJECT_DIR$/app/Helpers/pdf/locale/fr.csv" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\locale\it.csv" afterPath="$PROJECT_DIR$/app/Helpers/pdf/locale/it.csv" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\locale\nl.csv" afterPath="$PROJECT_DIR$/app/Helpers/pdf/locale/nl.csv" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\locale\pt.csv" afterPath="$PROJECT_DIR$/app/Helpers/pdf/locale/pt.csv" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\locale\tr.csv" afterPath="$PROJECT_DIR$/app/Helpers/pdf/locale/tr.csv" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\storage\debugbar\.gitignore" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/BaseModel.php" afterPath="$PROJECT_DIR$/app/BaseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Helpers/Helper.php" afterPath="$PROJECT_DIR$/app/Helpers/Helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PresupuestosController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PresupuestosController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/autoload.php" afterPath="$PROJECT_DIR$/bootstrap/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="amsrentalv2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -74,9 +459,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Services/HtmlBuilder.php" />
-        <option value="$PROJECT_DIR$/resources/views/presupuestos/asignarproveedores.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/views/presupuesto/asignarproveedores.js" />
         <option value="$PROJECT_DIR$/resources/views/detalle-articulos/asignarproveedores.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/detalle-articulos/proveedores-disponibles.blade.php" />
         <option value="$PROJECT_DIR$/public/js/views/detalle-articulos/asignar-proveedores.js" />
@@ -107,23 +489,26 @@
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/ArticuloPresupuesto.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Persona.php" />
         <option value="$PROJECT_DIR$/public/js/sb-admin-2.js" />
-        <option value="$PROJECT_DIR$/app/BaseModel.php" />
         <option value="$PROJECT_DIR$/app/Events/Models/BaseObserver.php" />
-        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/DbTransaction.php" />
         <option value="$PROJECT_DIR$/app/Events/Models/ArticuloPresupuestoObserver.php" />
         <option value="$PROJECT_DIR$/resources/views/reportes/html2pdf/presupuesto.blade.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
-        <option value="$PROJECT_DIR$/bootstrap/autoload.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/app/Providers/ObserversServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Presupuesto.php" />
         <option value="$PROJECT_DIR$/app/Events/Models/PresupuestoObserver.php" />
         <option value="$PROJECT_DIR$/app/Configuracion.php" />
+        <option value="$PROJECT_DIR$/app/Jobs/Job.php" />
+        <option value="$PROJECT_DIR$/bootstrap/autoload.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/BaseModel.php" />
+        <option value="$PROJECT_DIR$/app/Helpers/Helper.php" />
+        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
+        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PresupuestosController.php" />
       </list>
     </option>
@@ -170,6 +555,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -188,14 +575,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amsrentalv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amsrentalv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amsrentalv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amsrentalv2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ruletarusa" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aconcloud" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
@@ -206,13 +623,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Console\Commands" />
+      <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\database" />
+      <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\bootstrap\cache" />
+      <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app" />
       <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Events\Models" />
-      <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Providers" />
-      <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Events" />
-      <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\views\pago-proveedores" />
-      <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\pdf" />
       <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\resources\views\detalle-articulos" />
     </key>
   </component>
@@ -281,14 +699,14 @@
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19106881" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19106881" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14860907" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3372434" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3372434" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -350,122 +768,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_5.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34859154">
-          <caret line="287" column="9" selection-start-line="287" selection-start-column="9" selection-end-line="287" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5c7cfe48/d93eff82-47c0-410d-b97a-2714084613c9/amsrentalv2..tipo_articulos">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5c7cfe48/d93eff82-47c0-410d-b97a-2714084613c9/amsrentalv2..detalle_articulos">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5c7cfe48/d93eff82-47c0-410d-b97a-2714084613c9/amsrentalv2..articulo_proveedor">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5c7cfe48/d93eff82-47c0-410d-b97a-2714084613c9/amsrentalv2..articulo_presupuesto">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/5c7cfe48/d93eff82-47c0-410d-b97a-2714084613c9/amsrentalv2..presupuestos">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArticulosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/HtmlServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Registrar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/presupuestos/articulos-disponibles.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -526,13 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2094802">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="129" column="47" selection-start-line="129" selection-start-column="47" selection-end-line="129" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -600,13 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -642,13 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8419811">
-          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/UsuariosTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -656,26 +937,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5212264">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/BaseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Events/Models/ArticuloPresupuestoObserver.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,7 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,9 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-          <folding>
-            <element signature="e#32#49#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -701,9 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding>
-            <element signature="e#126#148#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -711,15 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Presupuesto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="150" column="41" selection-start-line="150" selection-start-column="39" selection-end-line="150" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,14 +984,153 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Jobs/Job.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+          <folding>
+            <element signature="e#28#57#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/cache/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/cache/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.12878788">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/ModelFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Events/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.522936">
+          <caret line="174" column="33" selection-start-line="174" selection-start-column="33" selection-end-line="174" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/BaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Helpers/Helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32415903">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Presupuesto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="185" column="45" selection-start-line="185" selection-start-column="42" selection-end-line="185" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9622642">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="e#28#80#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Helpers/pdf/_class/myPdf.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3207547">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PresupuestosController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4143731">
-          <caret line="145" column="32" selection-start-line="145" selection-start-column="32" selection-end-line="145" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.7617925">
+          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
           <folding />
         </state>
       </provider>

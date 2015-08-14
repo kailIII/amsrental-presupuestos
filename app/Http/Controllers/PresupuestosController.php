@@ -13,6 +13,8 @@ use App\ArticuloPresupuesto;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
+use HTML2PDF;
+use HTML2PDF_exception;
 
 class PresupuestosController extends Controller {
 
@@ -115,11 +117,11 @@ class PresupuestosController extends Controller {
     }
 
     public function getImprimir($id, $saveLocal=false){
-        require_once(app_path() . '/Helpers/html2pdf.class.php');
+        require_once(app_path() . '/Helpers/pdf/html2pdf.class.php');
         $data['presupuesto'] = Presupuesto::findOrFail($id);
         $content = view('reportes.html2pdf.presupuesto', $data)->render();
         try {
-            $html2pdf = new \HTML2PDF('P', 'letter', 'es');
+            $html2pdf = new HTML2PDF('P', 'letter', 'es');
             $html2pdf->pdf->SetDisplayMode('fullpage');
             $html2pdf->writeHTML($content);
             if($saveLocal){
