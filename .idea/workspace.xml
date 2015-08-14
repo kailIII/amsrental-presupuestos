@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbdc8c81-ff0a-4abf-b90c-ab61a503f75f" name="Default" comment="Asignacion automatica de proveedores a articulos">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Persona.php" afterPath="$PROJECT_DIR$/app/Persona.php" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Handlers\Events\.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Services\Registrar.php" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Handlers\Commands\.gitkeep" afterPath="$PROJECT_DIR$/app/Listeners/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="amsrentalv2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,9 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/detalle-articulos/asignarproveedores.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/detalle-articulos/proveedores-disponibles.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/views/detalle-articulos/asignar-proveedores.js" />
         <option value="$PROJECT_DIR$/app/Articulo.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ArticulosController.php" />
         <option value="$PROJECT_DIR$/resources/views/footer_panel.blade.php" />
@@ -127,6 +129,9 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PresupuestosController.php" />
         <option value="$PROJECT_DIR$/app/Persona.php" />
+        <option value="$PROJECT_DIR$/app/Services/Registrar.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" />
       </list>
     </option>
   </component>
@@ -208,11 +213,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Handlers" />
       <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Console\Commands" />
       <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\database" />
       <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\bootstrap\cache" />
       <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app" />
-      <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Events\Models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\developer\Google Drive\DesarrolloPersonal\amsrentalv2\app\Helpers\pdf" />
@@ -353,13 +358,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/presupuestos/articulos-disponibles.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/presupuestos/modificar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -717,6 +715,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58409786">
           <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Listeners/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
