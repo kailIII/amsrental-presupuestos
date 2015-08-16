@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge">{{$cant_presupuestos_aprobados}}</div>
-                            <div>Presupuestos Aprobados!</div>
+                            <div>¡Presupuestos Aprobados!</div>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge"><span class="decimal-format">{{$monto_x_cobrar}}</span> Bs.</div>
-                            <div>Por Cobrar!</div>
+                            <div>¡Por Cobrar!</div>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge"><span class="decimal-format">{{$monto_x_pagar}}</span> Bs.</div>
-                            <div>Por Pagar!</div>
+                            <div>¡Por Pagar!</div>
                         </div>
                     </div>
                 </div>
