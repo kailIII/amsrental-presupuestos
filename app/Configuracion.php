@@ -43,7 +43,7 @@ class Configuracion extends BaseModel {
     public static function get($variable, $description = "") {
         $var = static::whereVariable($variable)->first();
         if (!is_object($var)) {
-            $var = static::create(['variable' => $variable, 'value' => '', 'description'=>$description]);
+            $var = static::create(['variable' => $variable, 'value' => 'example', 'description'=>$description]);
         }
         return $var->value;
     }

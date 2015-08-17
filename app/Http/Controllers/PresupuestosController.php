@@ -145,10 +145,14 @@ class PresupuestosController extends Controller {
         $data['mensaje'] = $request->get('mensaje');
         \Mail::send('emails.presupuesto', $data, function($message) use ($request) {
             $from = Configuracion::get('remitente-correo', 'Remitente de los correos a enviar');
-            $message->from($from);
+            $from_name = Configuracion::get('remitente-correo', 'Nombre del remitente de los correos a enviar');
+
+            $message->from($from, $from_name);
             $message->to($request->get('correo'))->subject($request->get('asunto'))->cc(\Auth::user()->email);
             $message->attach(storage_path('app/presupuesto.pdf'));
         });
+
+        return response()->json(['mensaje'=>'Se envio el correo correctamente']);
     }
 
     public function getAsignarproveedores($presupuesto_id){
