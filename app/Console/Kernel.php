@@ -22,8 +22,11 @@ class Kernel extends ConsoleKernel {
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
-    protected function schedule(Schedule $schedule) {
-
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule->command('backup:run --only-db --prefix="db-"')->hourly();
+        $schedule->command('backup:run')->weekly();
+        $schedule->command('backup:clean')->daily();
     }
 
 }
