@@ -127,6 +127,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\HtmlServiceProvider::class,
         App\Providers\ObserversServiceProvider::class,
+        App\Providers\DropboxFilesystemServiceProvider::class,
+        Spatie\Backup\BackupServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------
