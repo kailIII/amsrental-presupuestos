@@ -24,6 +24,7 @@ class CreatePersonasTable extends Migration {
             $table->string('tipo', 1);
             $table->softDeletes();
             $table->timestamps();
+            $table->engine = "InnoDb";
         });
     }
 

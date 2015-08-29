@@ -24,6 +24,7 @@ class CreatePresupuestosTable extends Migration {
             
             $table->softDeletes();
             $table->timestamps();
+            $table->engine = "InnoDb";
         });
     }
 

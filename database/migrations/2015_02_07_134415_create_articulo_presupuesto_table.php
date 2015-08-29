@@ -21,6 +21,7 @@ class CreateArticuloPresupuestoTable extends Migration {
             $table->integer('orden')->nullable();
             $table->decimal('costo_venta', 14, 2)->nullable();
             $table->timestamps();
+            $table->engine = "InnoDb";
         });
     }
 

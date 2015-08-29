@@ -18,6 +18,7 @@ class CreateConfigurationsTabl extends Migration {
             $table->string('description', 100)->nullable();
             $table->boolean('ind_editor');
             $table->timestamps();
+            $table->engine = "InnoDb";
         });
     }
 

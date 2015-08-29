@@ -22,6 +22,13 @@ class ConfiguracionTableSeeder extends Seeder {
         Configuracion::set('footer_presupuesto', '<p style="text-align: center; color: blue;">
             Calle 3ra. trans. De Monte Cristo, No. 17, Urb. Monte Cristo, Casa Sta. Eduviges, Caracas 1020. Tel oficina 0212-2322394. Tel móvil: 0414-3134858 Fax: 0212-6352396.<br><a href="http://www.amsrental.com">www.amsrental.com</a>
         </p>', 'Pie de página del presupuesto', true);
+
+        Configuracion::set('remitente-correo', 'aoviedo@amsrental.com', 'Remitente de los correos a enviar', false);
+        Configuracion::set('nombre-remitente-correo', 'Ams Rental', 'Nombre del remitente de los correos a enviar', false);
+
+        Configuracion::set('nro-presupuesto-2015', 1, 'Próximo número de presupuesto para el año 2015', false);
+        Configuracion::set('nro-presupuesto-2016', 1, 'Próximo número de presupuesto para el año 2016', false);
+        Configuracion::set('nro-presupuesto-2017', 1, 'Próximo número de presupuesto para el año 2017', false);
     }
 
 }

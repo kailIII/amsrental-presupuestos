@@ -18,6 +18,7 @@ class CreateArticuloProveedorTable extends Migration {
             $table->integer('cantidad', false, true)->nullable();
             $table->decimal('costo_compra', 14, 2)->nullable();
             $table->timestamps();
+            $table->engine = "InnoDb";
         });
     }
 

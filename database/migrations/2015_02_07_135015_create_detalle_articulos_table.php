@@ -19,6 +19,7 @@ class CreateDetalleArticulosTable extends Migration {
             $table->boolean('ind_confirmado')->default(0);
             $table->datetime('fecha_pago')->nullable();
             $table->timestamps();
+            $table->engine = "InnoDb";
         });
     }
 

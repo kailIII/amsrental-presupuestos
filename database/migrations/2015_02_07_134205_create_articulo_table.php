@@ -18,6 +18,7 @@ class CreateArticuloTable extends Migration {
             $table->boolean('ind_excento');
             $table->softDeletes();
             $table->timestamps();
+            $table->engine = "InnoDb";
         });
     }
 
