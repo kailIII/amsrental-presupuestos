@@ -45,7 +45,7 @@ class TipoArticulosController extends Controller
         $tipo = TipoArticulo::findOrNew($req->get('id', 0));
         $tipo->fill($req->all());
         if ($tipo->save()) {
-            return Redirect::to('tipo-articulos')->with('mensaje', 'Se actualizó el tipo de articulo correctamente');
+            return redirect('tipo-articulos')->with('mensaje', 'Se actualizó el tipo de articulo correctamente');
         }
 
         return Redirect::back()->withInput()->withErrors($tipo->getErrors());
@@ -55,7 +55,7 @@ class TipoArticulosController extends Controller
     {
         $tipo = TipoArticulo::findOrFail($req->get('id'));
         if ($tipo->delete()) {
-            return Redirect::to('tipo-articulos')->with('mensaje', 'Se eliminó el tipo de articulo correctamente');
+            return redirect('tipo-articulos')->with('mensaje', 'Se eliminó el tipo de articulo correctamente');
         }
 
         return Redirect::back()->withInput()->withErrors($tipo->getErrors());

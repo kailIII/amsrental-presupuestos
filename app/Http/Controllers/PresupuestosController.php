@@ -39,7 +39,10 @@ class PresupuestosController extends Controller
             $data['clientes'] = Persona::comboClientes();
             $data['articulos'] = Articulo::eagerLoad()->get();
             $data['articulosPre'] = $data['presupuesto']->articulos;
-
+            $data['cliente'] = $data['presupuesto']->cliente;
+            if(is_null($data['cliente'])){
+                $data['cliente'] = new Persona();
+            }
             return view('presupuestos.modificar', $data);
         }
 
@@ -51,8 +54,16 @@ class PresupuestosController extends Controller
     {
         $presupuesto = Presupuesto::findOrNew($req->get('id', 0));
         $presupuesto->fill($req->all());
+
+        $cliente = Persona::findOrNew($req->get('cliente_id', 0));
+        $cliente->tipo = "C";
+        $cliente->fill($req->all());
+        if(!$cliente->save()){
+            return Redirect::back()->withInput()->withErrors($cliente->getErrors());
+        }
+        $presupuesto->cliente()->associate($cliente);
         if ($presupuesto->save()) {
-            return Redirect::to('presupuestos/modificar/' . $presupuesto->id)->with('mensaje',
+            return redirect('presupuestos/modificar/' . $presupuesto->id)->with('mensaje',
                 'Se guardó el presupuesto correctamente');
         }
 
@@ -109,7 +120,7 @@ class PresupuestosController extends Controller
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->enviado();
 
-        return Redirect::to('presupuestos?estatus=2')->with('mensaje',
+        return redirect('presupuestos?estatus=2')->with('mensaje',
             'Se marcó el presupuesto como enviado al cliente correctamente.');
     }
 
@@ -118,7 +129,7 @@ class PresupuestosController extends Controller
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->aprobado();
 
-        return Redirect::to('presupuestos?estatus=' . $presupuesto->estatus)->with('mensaje',
+        return redirect('presupuestos?estatus=' . $presupuesto->estatus)->with('mensaje',
             'Se marcó el presupuesto como aprobado correctamente.');
     }
 
@@ -127,7 +138,7 @@ class PresupuestosController extends Controller
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->pagado();
 
-        return Redirect::to('presupuestos?estatus=5')->with('mensaje',
+        return redirect('presupuestos?estatus=5')->with('mensaje',
             'Se marcó el presupuesto como pagado correctamente.');
     }
 
@@ -136,7 +147,7 @@ class PresupuestosController extends Controller
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->anular();
 
-        return Redirect::to('presupuestos?estatus=6')->with('mensaje',
+        return redirect('presupuestos?estatus=6')->with('mensaje',
             'Se marcó el presupuesto como anulado correctamente.');
     }
 
@@ -145,7 +156,7 @@ class PresupuestosController extends Controller
         $presupuesto = Presupuesto::findOrFail($id);
         $presupuesto->reversar();
 
-        return Redirect::to('presupuestos?estatus=4')->with('mensaje',
+        return redirect('presupuestos?estatus=4')->with('mensaje',
             'Se marcó el presupuesto como aprobado correctamente.');
     }
 

@@ -145,7 +145,7 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
     public function setFechaEventoAttribute($param)
     {
         try {
-            $this->attributes['fecha_evento'] = \Carbon::createFromFormat('d/m/Y', $param);
+            $this->attributes['fecha_evento'] = Carbon::createFromFormat('d/m/Y', $param);
         } catch (\InvalidArgumentException $e) {
             $this->attributes['fecha_evento'] = null;
         }
@@ -155,7 +155,7 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
     public function setFechaMontajeAttribute($param)
     {
         try {
-            $this->attributes['fecha_montaje'] = \Carbon::createFromFormat('d/m/Y', $param);
+            $this->attributes['fecha_montaje'] = Carbon::createFromFormat('d/m/Y', $param);
         } catch (\InvalidArgumentException $e) {
             $this->attributes['fecha_montaje'] = null;
         }
@@ -163,7 +163,7 @@ class Presupuesto extends BaseModel implements Interfaces\DefaultValuesInterface
 
     public function getDefaultValues()
     {
-        $fechaCar = \Carbon::now();
+        $fechaCar = Carbon::now();
         $proximo = Configuracion::get('nro-presupuesto-' . $fechaCar->year);
         if ($proximo == "") {
             $proximo = 1;

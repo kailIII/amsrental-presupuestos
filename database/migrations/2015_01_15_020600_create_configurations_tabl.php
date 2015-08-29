@@ -15,7 +15,7 @@ class CreateConfigurationsTabl extends Migration {
             $table->increments('id');
             $table->string('variable',50);
             $table->text('value');
-            $table->string('description', 100);
+            $table->string('description', 100)->nullable();
             $table->boolean('ind_editor');
             $table->timestamps();
         });

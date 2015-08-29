@@ -48,7 +48,7 @@ class ArticulosController extends Controller
         $articulo = Articulo::findOrNew($req->get('id', 0));
         $articulo->fill($req->all());
         if ($articulo->save()) {
-            return Redirect::to('articulos')->with('mensaje', 'Se actualizó el articulo correctamente');
+            return redirect('articulos')->with('mensaje', 'Se actualizó el articulo correctamente');
         }
 
         return Redirect::back()->withInput()->withErrors($articulo->getErrors());
@@ -58,7 +58,7 @@ class ArticulosController extends Controller
     {
         $articulo = Articulo::findOrFail($req->get('id'));
         if ($articulo->delete()) {
-            return Redirect::to('articulos')->with('mensaje', 'Se eliminó el articulo correctamente');
+            return redirect('articulos')->with('mensaje', 'Se eliminó el articulo correctamente');
         }
 
         return Redirect::back()->withInput()->withErrors($articulo->getErrors());

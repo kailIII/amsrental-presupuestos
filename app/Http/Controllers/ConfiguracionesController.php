@@ -45,7 +45,7 @@ class ConfiguracionesController extends Controller
         $configuracion = Configuracion::findOrFail($req->get('id', 0));
         $configuracion->fill($req->all());
         if ($configuracion->save()) {
-            return Redirect::to('configuraciones')->with('mensaje',
+            return redirect('configuraciones')->with('mensaje',
                 'Se actualizó el ' . $configuracion->description . ' correctamente');
         }
 

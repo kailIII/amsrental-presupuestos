@@ -53,7 +53,7 @@ class PersonasController extends Controller
         $persona = Persona::findOrNew($req->get('id', 0));
         $persona->fill($req->all());
         if ($persona->save()) {
-            return Redirect::to('personas?tipo=' . $persona->tipo)->with('mensaje',
+            return redirect('personas?tipo=' . $persona->tipo)->with('mensaje',
                 'Se actualizó la persona correctamente');
         }
 
@@ -65,10 +65,16 @@ class PersonasController extends Controller
         $persona = Persona::findOrFail($req->get('id'));
         $tipo = $persona->tipo;
         if ($persona->delete()) {
-            return Redirect::to('personas?tipo=' . $tipo)->with('mensaje', 'Se eliminó la persona correctamente');
+            return redirect('personas?tipo=' . $tipo)->with('mensaje', 'Se eliminó la persona correctamente');
         }
 
         return Redirect::back()->withInput()->withErrors($persona->getErrors());
+    }
+
+    public function getAjax($id)
+    {
+        $persona = Persona::findOrFail($id);
+        return response()->json($persona);
     }
 
 }
