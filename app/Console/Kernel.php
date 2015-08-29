@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use Carbon\Carbon;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -24,8 +25,9 @@ class Kernel extends ConsoleKernel {
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('backup:run --only-db --prefix="db-"')->hourly();
-        $schedule->command('backup:run')->weekly();
+        $prefix = Carbon::now()->format('Y/m/d');
+        $schedule->command('backup:run --only-db --prefix="db/'.$prefix.'"')->hourly();
+        $schedule->command('backup:run --prefix="files/'.$prefix.'"')->weekly();
         $schedule->command('backup:clean')->daily();
     }
 
