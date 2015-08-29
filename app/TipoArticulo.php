@@ -15,7 +15,8 @@ namespace App;
  * @method static \Illuminate\Database\Query\Builder|\App\TipoArticulo whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\TipoArticulo whereUpdatedAt($value)
  */
-class TipoArticulo extends BaseModel {
+class TipoArticulo extends BaseModel
+{
 
     protected $table = "tipo_articulos";
 
@@ -28,20 +29,23 @@ class TipoArticulo extends BaseModel {
         'nombre',
     ];
 
-    protected function getRules(){
-        return [
-            'nombre' => 'required',
-        ];
-    }
-
-    protected function getPrettyFields() {
+    protected function getPrettyFields()
+    {
         return [
             'nombre' => 'Tipo de articulo',
         ];
     }
 
-    public function getPrettyName() {
+    public function getPrettyName()
+    {
         return "Tipo de articulo";
+    }
+
+    protected function getRules()
+    {
+        return [
+            'nombre' => 'required',
+        ];
     }
 
 }

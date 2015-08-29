@@ -14,16 +14,17 @@ use App\TipoArticulo;
 use App\User;
 use Illuminate\Support\ServiceProvider;
 
-class ObserversServiceProvider extends ServiceProvider {
+class ObserversServiceProvider extends ServiceProvider
+{
 
-	/**
-	 * Bootstrap any application services.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		Articulo::observe(new BaseObserver());
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Articulo::observe(new BaseObserver());
         ArticuloPresupuesto::observe(new ArticuloPresupuestoObserver());
         ArticuloProveedor::observe(new BaseObserver());
         Configuracion::observe(new BaseObserver());
@@ -32,16 +33,16 @@ class ObserversServiceProvider extends ServiceProvider {
         Presupuesto::observe(new PresupuestoObserver());
         TipoArticulo::observe(new BaseObserver());
         User::observe(new BaseObserver());
-	}
+    }
 
-	/**
-	 * Register any application services.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
-		//
-	}
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
 
 }

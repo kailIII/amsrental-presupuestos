@@ -22,35 +22,44 @@ namespace App;
  * @method static \Illuminate\Database\Query\Builder|\App\Configuracion whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Configuracion whereUpdatedAt($value)
  */
-use Illuminate\Database\Eloquent\Model;
 
-class Configuracion extends BaseModel {
+class Configuracion extends BaseModel
+{
 
     protected $table = "configuraciones";
     protected $fillable = ['variable', 'value', 'description', 'ind_editor'];
 
-    public static function set($variable, $value, $description ="", $has_editor = false) {
+    public static function set($variable, $value, $description = "", $has_editor = false)
+    {
         $var = static::whereVariable($variable)->first();
-        if ($var==null) {
-            $var = static::create(['variable' => $variable,'value'=>$value, 'description'=>$description, 'ind_editor'=>$has_editor]);
-        }else{
+        if ($var == null) {
+            $var = static::create(['variable'    => $variable,
+                                   'value'       => $value,
+                                   'description' => $description,
+                                   'ind_editor'  => $has_editor
+            ]);
+        } else {
             $var->value = $value;
             $var->save();
         }
 
     }
 
-    public static function get($variable, $description = "") {
+    public static function get($variable, $description = "")
+    {
         $var = static::whereVariable($variable)->first();
         if (!is_object($var)) {
-            $var = static::create(['variable' => $variable, 'value' => 'example', 'description'=>$description]);
+            $var = static::create(['variable' => $variable, 'value' => 'example', 'description' => $description]);
         }
+
         return $var->value;
     }
 
-    public function getTableFields() {
+    protected function getPrettyFields()
+    {
         return [
-            'description', 'value'
+            'value'       => 'Valor',
+            'description' => 'Descripción'
         ];
     }
 
@@ -59,18 +68,18 @@ class Configuracion extends BaseModel {
         return "Configuracion";
     }
 
-    protected function getPrettyFields()
-    {
-        return [
-            'value'=>'Valor',
-            'description'=>'Descripción'
-        ];
-    }
-
     protected function getRules()
     {
         return [
-          'value'=>'required',
+            'value' => 'required',
+        ];
+    }
+
+    public function getTableFields()
+    {
+        return [
+            'description',
+            'value'
         ];
     }
 }

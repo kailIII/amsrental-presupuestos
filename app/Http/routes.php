@@ -14,14 +14,14 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::controllers([
-    'auth' => 'Auth\AuthController',
-    'password' => 'Auth\PasswordController',
-    'tipo-articulos' => 'TipoArticulosController',
-    'articulos' => 'ArticulosController',
-    'personas' => 'PersonasController',
-    'presupuestos' => 'PresupuestosController',
-    'configuraciones' => 'ConfiguracionesController',
-    'usuarios' => 'UsuariosController',
-    'pago-proveedores' => 'PagoProveedoresController',
+    'auth'              => 'Auth\AuthController',
+    'password'          => 'Auth\PasswordController',
+    'tipo-articulos'    => 'TipoArticulosController',
+    'articulos'         => 'ArticulosController',
+    'personas'          => 'PersonasController',
+    'presupuestos'      => 'PresupuestosController',
+    'configuraciones'   => 'ConfiguracionesController',
+    'usuarios'          => 'UsuariosController',
+    'pago-proveedores'  => 'PagoProveedoresController',
     'detalle-articulos' => 'DetalleArticulosController',
 ]);

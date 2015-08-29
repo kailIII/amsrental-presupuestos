@@ -11,15 +11,17 @@ namespace App\Events\Models;
 use App\Configuracion;
 use Carbon\Carbon;
 
-class PresupuestoObserver extends BaseObserver{
+class PresupuestoObserver extends BaseObserver
+{
 
     public function created()
     {
         $hoy = Carbon::now();
-        $proximo = Configuracion::get('nro-presupuesto-'.$hoy->year)+1;
-        if($proximo==1){
-            $proximo=2;
+        $proximo = Configuracion::get('nro-presupuesto-' . $hoy->year) + 1;
+        if ($proximo == 1) {
+            $proximo = 2;
         }
-        Configuracion::set('nro-presupuesto-'.$hoy->year, $proximo, 'Proximo Nro de presupuesto para la fecha: '.$hoy->year);
+        Configuracion::set('nro-presupuesto-' . $hoy->year, $proximo,
+            'Proximo Nro de presupuesto para la fecha: ' . $hoy->year);
     }
 }

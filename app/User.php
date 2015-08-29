@@ -2,11 +2,11 @@
 
 namespace App;
 
+use App\Interfaces\SimpleTableInterface;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
-use App\Interfaces\SimpleTableInterface;
 
 /**
  * UnosGorditos\User
@@ -27,7 +27,8 @@ use App\Interfaces\SimpleTableInterface;
  * @method static \Illuminate\Database\Query\Builder|\UnosGorditos\User whereUpdatedAt($value)
  * @property-read mixed $estatus_display
  */
-class User extends BaseModel implements AuthenticatableContract, CanResetPasswordContract, SimpleTableInterface {
+class User extends BaseModel implements AuthenticatableContract, CanResetPasswordContract, SimpleTableInterface
+{
 
     use Authenticatable,
         CanResetPassword;
@@ -53,31 +54,36 @@ class User extends BaseModel implements AuthenticatableContract, CanResetPasswor
      */
     protected $hidden = ['password', 'remember_token'];
 
-    public function getPrettyFields(){
+    public function getPrettyFields()
+    {
         return [
-            'name'=>'Nombre',
-            'email'=>'Correo',
-            'password'=>'Contraseña',
+            'name'     => 'Nombre',
+            'email'    => 'Correo',
+            'password' => 'Contraseña',
         ];
     }
 
-    public function getPrettyName(){
+    public function getPrettyName()
+    {
         return "Usuario";
     }
 
-    public function getTableFields(){
-        return ['name','email'];
+    public function getTableFields()
+    {
+        return ['name', 'email'];
     }
 
-    public function setPasswordAttribute($password){
+    public function setPasswordAttribute($password)
+    {
         $this->attributes['password'] = \Hash::make($password);
     }
 
-    public function getRules(){
+    public function getRules()
+    {
         return [
-            'name'=>'required',
-            'email'=>'required|email',
-            'password'=>'min:6',
+            'name'     => 'required',
+            'email'    => 'required|email',
+            'password' => 'min:6',
         ];
     }
 }

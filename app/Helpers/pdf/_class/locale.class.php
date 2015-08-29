@@ -1,4 +1,5 @@
 <?php
+
 /**
  * HTML2PDF Librairy - HTML2PDF Locale
  *
@@ -8,7 +9,6 @@
  * @author    Laurent MINGUET <webmaster@html2pdf.fr>
  * @version   4.03
  */
-
 class HTML2PDF_locale
 {
     /**
@@ -21,7 +21,7 @@ class HTML2PDF_locale
      * texts of the current used locale
      * @var array
      */
-    static protected $_list = array();
+    static protected $_list = [];
 
     /**
      * directory where locale files are
@@ -33,12 +33,13 @@ class HTML2PDF_locale
      * load the locale
      *
      * @access public
+     *
      * @param  string $code
      */
     static public function load($code)
     {
-        if (self::$_directory===null) {
-            self::$_directory = dirname(dirname(__FILE__)).'/locale/';
+        if (self::$_directory === null) {
+            self::$_directory = dirname(dirname(__FILE__)) . '/locale/';
         }
 
         // must be in lower case
@@ -46,26 +47,29 @@ class HTML2PDF_locale
 
         // must be [a-z-0-9]
         if (!preg_match('/^([a-z0-9]+)$/isU', $code)) {
-            throw new HTML2PDF_exception(0, 'invalid language code ['.self::$_code.']');
+            throw new HTML2PDF_exception(0, 'invalid language code [' . self::$_code . ']');
         }
 
         // save the code
         self::$_code = $code;
 
         // get the name of the locale file
-        $file = self::$_directory.self::$_code.'.csv';
+        $file = self::$_directory . self::$_code . '.csv';
 
         // the file must exist
         if (!is_file($file)) {
-            throw new HTML2PDF_exception(0, 'language code ['.self::$_code.'] unknown. You can create the translation file ['.$file.'] and send it to the webmaster of html2pdf in order to integrate it into a future release');
+            throw new HTML2PDF_exception(0,
+                'language code [' . self::$_code . '] unknown. You can create the translation file [' . $file . '] and send it to the webmaster of html2pdf in order to integrate it into a future release');
         }
 
         // load the file
-        self::$_list = array();
+        self::$_list = [];
         $handle = fopen($file, 'r');
         while (!feof($handle)) {
             $line = fgetcsv($handle);
-            if (count($line)!=2) continue;
+            if (count($line) != 2) {
+                continue;
+            }
             self::$_list[trim($line[0])] = trim($line[1]);
         }
         fclose($handle);
@@ -79,17 +83,19 @@ class HTML2PDF_locale
     static public function clean()
     {
         self::$_code = null;
-        self::$_list = array();
+        self::$_list = [];
     }
 
     /**
      * get a text
      *
      * @access public static
+     *
      * @param  string $key
+     *
      * @return string
      */
-    static public function get($key, $default='######')
+    static public function get($key, $default = '######')
     {
         return (isset(self::$_list[$key]) ? self::$_list[$key] : $default);
     }

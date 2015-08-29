@@ -1,5 +1,7 @@
 <?php namespace App\Interfaces;
-interface SelectInterface {
+
+interface SelectInterface
+{
 
     static function getCampoCombo();
 

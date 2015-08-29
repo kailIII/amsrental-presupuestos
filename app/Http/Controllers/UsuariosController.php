@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Http\Request;
 
 class UsuariosController extends Controller
 {
@@ -21,12 +21,14 @@ class UsuariosController extends Controller
     public function getIndex()
     {
         $data['usuarios'] = User::all();
+
         return view('usuarios.index', $data);
     }
 
     public function getModificar($id = 0)
     {
         $data['usuario'] = User::findOrNew($id);
+
         return view('usuarios.form', $data);
     }
 
@@ -40,6 +42,7 @@ class UsuariosController extends Controller
         if ($usuario->save()) {
             return redirect('usuarios')->with('mensaje', 'Se actualizó el usuario correctamente');
         }
+
         return redirect()->back()->withInput()->withErrors($usuario->getErrors());
     }
 
@@ -49,6 +52,7 @@ class UsuariosController extends Controller
         if ($usuario->delete()) {
             return redirect('usuarios')->with('mensaje', 'Se eliminó el usuario correctamente');
         }
+
         return redirect()->back()->withInput()->withErrors($usuario->getErrors());
     }
 }

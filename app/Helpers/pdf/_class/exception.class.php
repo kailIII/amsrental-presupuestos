@@ -1,4 +1,5 @@
 <?php
+
 /**
  * HTML2PDF Librairy - HTML2PDF Exception
  *
@@ -8,7 +9,6 @@
  * @author    Laurent MINGUET <webmaster@html2pdf.fr>
  * @version   4.03
  */
-
 class HTML2PDF_exception extends exception
 {
     protected $_tag = null;
@@ -20,15 +20,15 @@ class HTML2PDF_exception extends exception
     /**
      * generate a HTML2PDF exception
      *
-     * @param    int     $err error number
-     * @param    mixed   $other additionnal informations
+     * @param    int $err error number
+     * @param    mixed $other additionnal informations
+     *
      * @return   string  $html optionnal code HTML associated to the error
      */
     final public function __construct($err = 0, $other = null, $html = '')
     {
         // read the error
-        switch($err)
-        {
+        switch ($err) {
             case 1: // Unsupported tag
                 $msg = (HTML2PDF_locale::get('err01'));
                 $msg = str_replace('[[OTHER]]', $other, $msg);
@@ -88,20 +88,21 @@ class HTML2PDF_exception extends exception
         }
 
         // create the HTML message
-        $this->_messageHtml = '<span style="color: #AA0000; font-weight: bold;">'.HTML2PDF_locale::get('txt01', 'error: ').$err.'</span><br>';
-        $this->_messageHtml.= HTML2PDF_locale::get('txt02', 'file:').' '.$this->file.'<br>';
-        $this->_messageHtml.= HTML2PDF_locale::get('txt03', 'line:').' '.$this->line.'<br>';
-        $this->_messageHtml.= '<br>';
-        $this->_messageHtml.= $msg;
+        $this->_messageHtml = '<span style="color: #AA0000; font-weight: bold;">' . HTML2PDF_locale::get('txt01',
+                'error: ') . $err . '</span><br>';
+        $this->_messageHtml .= HTML2PDF_locale::get('txt02', 'file:') . ' ' . $this->file . '<br>';
+        $this->_messageHtml .= HTML2PDF_locale::get('txt03', 'line:') . ' ' . $this->line . '<br>';
+        $this->_messageHtml .= '<br>';
+        $this->_messageHtml .= $msg;
 
         // create the text message
-        $msg = HTML2PDF_locale::get('txt01', 'error: ').$err.' : '.strip_tags($msg);
+        $msg = HTML2PDF_locale::get('txt01', 'error: ') . $err . ' : ' . strip_tags($msg);
 
         // add the optionnal html content
         if ($html) {
-            $this->_messageHtml.= "<br><br>HTML : ...".trim(htmlentities($html)).'...';
+            $this->_messageHtml .= "<br><br>HTML : ..." . trim(htmlentities($html)) . '...';
             $this->_html = $html;
-            $msg.= ' HTML : ...'.trim($html).'...';
+            $msg .= ' HTML : ...' . trim($html) . '...';
         }
 
         // save the other informations

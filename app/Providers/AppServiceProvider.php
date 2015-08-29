@@ -4,15 +4,20 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider {
+class AppServiceProvider extends ServiceProvider
+{
 
     /**
      * Bootstrap any application services.
      *
      * @return void
      */
-    public function boot() {
-        //
+    public function boot()
+    {
+        if ($this->app->environment() == "local") {
+            $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+            $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
+        }
     }
 
     /**
@@ -24,11 +29,12 @@ class AppServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    public function register() {
+    public function register()
+    {
         $this->app->bind(
-                'Illuminate\Contracts\Auth\Registrar', 'App\Services\Registrar'
+            'Illuminate\Contracts\Auth\Registrar', 'App\Services\Registrar'
         );
-        
+
         $this->app->bind('App\Services\FormBuilder');
     }
 

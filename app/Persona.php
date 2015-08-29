@@ -38,9 +38,10 @@ namespace App;
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\DetalleArticulo[] $articulosVendidos
  * @property-read mixed $deuda
  * @method static \App\Persona externos()
- * @property-read mixed $pagado 
+ * @property-read mixed $pagado
  */
-class Persona extends BaseModel implements Interfaces\SimpleTableInterface {
+class Persona extends BaseModel implements Interfaces\SimpleTableInterface
+{
 
     protected $table = "personas";
 
@@ -50,90 +51,115 @@ class Persona extends BaseModel implements Interfaces\SimpleTableInterface {
      * @var array
      */
     protected $fillable = [
-        'rif', 'nombre', 'correo', 'telefono_oficina', 'telefono_fax', 'telefono_otro', 'direccion', 'ind_externo', 'tipo'
+        'rif',
+        'nombre',
+        'correo',
+        'telefono_oficina',
+        'telefono_fax',
+        'telefono_otro',
+        'direccion',
+        'ind_externo',
+        'tipo'
     ];
 
-    protected function getRules(){
-        return [
-            'rif' => 'required',
-            'nombre' => 'required',
-            'correo' => 'email',
-            'telefono_oficina' => 'required|max:20|min:10|regex:/^[0-9.-]*$/',
-            'telefono_fax' => 'max:14|min:10|regex:/^[0-9.-]*$/',
-            'telefono_otro' => 'max:14|min:10|regex:/^[0-9.-]*$/',
-            'direccion' => 'required',
-            'ind_externo' => '',
-            'tipo' => 'required',
-        ];
+    public static function comboClientes()
+    {
+        $combo = Persona::filtrar('C')->get()->lists('nombre', 'id')->all();
+        $combo[''] = 'Seleccione';
+
+        return $combo;
+
     }
 
-    protected function getPrettyFields() {
-        return [
-            'rif' => 'RIF',
-            'nombre' => 'Nombre',
-            'correo' => 'Correo Electrónico',
-            'telefonos' => 'Teléfonos',
-            'telefono_oficina' => 'Teléfono Oficina',
-            'telefono_fax' => 'Teléfono Fax',
-            'telefono_otro' => 'Teléfono Otro',
-            'direccion' => 'Dirección',
-            'ind_externo' => '¿Proveedor Externo?',
-            'tipo' => 'Tipo',
-        ];
-    }
-
-    public function getTelefonosAttribute() {
+    public function getTelefonosAttribute()
+    {
         $telefonos = "";
         if ($this->telefono_oficina != "") {
-            $telefonos.="Oficina: " . $this->telefono_oficina . '<br>';
+            $telefonos .= "Oficina: " . $this->telefono_oficina . '<br>';
         }
         if ($this->telefono_fax != "") {
-            $telefonos.="Fax: " . $this->telefono_fax . '<br>';
+            $telefonos .= "Fax: " . $this->telefono_fax . '<br>';
         }
         if ($this->telefono_otro != "") {
-            $telefonos.="Otro: " . $this->telefono_otro;
+            $telefonos .= "Otro: " . $this->telefono_otro;
         }
+
         return $telefonos;
     }
 
-    public function getPrettyName() {
-        return "Persona";
-    }
-
-    public function scopeFiltrar($query, $tipo) {
+    public function scopeFiltrar($query, $tipo)
+    {
         return $query->whereTipo($tipo);
     }
 
-    public function scopeExternos($query){
+    public function scopeExternos($query)
+    {
         return $query->filtrar('P')->whereIndExterno(true);
     }
 
-    public function getTableFields() {
-        return [
-            'rif', 'nombre', 'telefonos','correo'
-        ];
-    }
-
-    public function articuloProveedor() {
+    public function articuloProveedor()
+    {
         return $this->hasMany('App\ArticuloProveedor', 'proveedor_id')->with('proveedor');
     }
 
-    public function articulosVendidos(){
-        return $this->hasMany('App\DetalleArticulo','proveedor_id');
-    }
-
-    public function getDeudaAttribute(){
+    public function getDeudaAttribute()
+    {
         return $this->articulosVendidos()->whereNull('fecha_pago')->get()->sum('costo_total');
     }
 
-    public function getPagadoAttribute(){
+    public function articulosVendidos()
+    {
+        return $this->hasMany('App\DetalleArticulo', 'proveedor_id');
+    }
+
+    public function getPagadoAttribute()
+    {
         return $this->articulosVendidos()->whereNotNull('fecha_pago')->get()->sum('costo_total');
     }
 
-    public static function comboClientes(){
-        $combo = Persona::filtrar('C')->get()->lists('nombre','id')->all();
-        $combo[''] = 'Seleccione';
-        return $combo;
+    protected function getPrettyFields()
+    {
+        return [
+            'rif'              => 'RIF',
+            'nombre'           => 'Nombre',
+            'correo'           => 'Correo Electrónico',
+            'telefonos'        => 'Teléfonos',
+            'telefono_oficina' => 'Teléfono Oficina',
+            'telefono_fax'     => 'Teléfono Fax',
+            'telefono_otro'    => 'Teléfono Otro',
+            'direccion'        => 'Dirección',
+            'ind_externo'      => '¿Proveedor Externo?',
+            'tipo'             => 'Tipo',
+        ];
+    }
 
+    public function getPrettyName()
+    {
+        return "Persona";
+    }
+
+    protected function getRules()
+    {
+        return [
+            'rif'              => 'required',
+            'nombre'           => 'required',
+            'correo'           => 'email',
+            'telefono_oficina' => 'required|max:20|min:10|regex:/^[0-9.-]*$/',
+            'telefono_fax'     => 'max:14|min:10|regex:/^[0-9.-]*$/',
+            'telefono_otro'    => 'max:14|min:10|regex:/^[0-9.-]*$/',
+            'direccion'        => 'required',
+            'ind_externo'      => '',
+            'tipo'             => 'required',
+        ];
+    }
+
+    public function getTableFields()
+    {
+        return [
+            'rif',
+            'nombre',
+            'telefonos',
+            'correo'
+        ];
     }
 }

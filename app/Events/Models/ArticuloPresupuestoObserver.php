@@ -11,31 +11,35 @@ namespace App\Events\Models;
 
 use App\DetalleArticulo;
 
-class ArticuloPresupuestoObserver extends BaseObserver{
+class ArticuloPresupuestoObserver extends BaseObserver
+{
 
-    public function saving($model){
-        if($model->isDirty('cantidad')){
+    public function saving($model)
+    {
+        if ($model->isDirty('cantidad')) {
             $actuales = $model->detalleArticulos()->count();
-            if($model->cantidad>=$actuales){
-                for($i = $actuales; $i<$model->cantidad; $i++){
-                    $detalle = DetalleArticulo::create(['articulo_presupuesto_id'=>$model->id]);
+            if ($model->cantidad >= $actuales) {
+                for ($i = $actuales; $i < $model->cantidad; $i++) {
+                    $detalle = DetalleArticulo::create(['articulo_presupuesto_id' => $model->id]);
                     $detalle->tratarAsignarProveedor();
                 }
-            }else{
-                $detalles = $model->detalleArticulos()->take($actuales-$model->cantidad)->get();
-                $detalles->each(function($detalle){
+            } else {
+                $detalles = $model->detalleArticulos()->take($actuales - $model->cantidad)->get();
+                $detalles->each(function ($detalle) {
                     $detalle->delete();
                 });
                 $detalles = $model->detalleArticulos;
-                $detalles->each(function($detalle){
+                $detalles->each(function ($detalle) {
                     $detalle->tratarAsignarProveedor();
                 });
             }
         }
+
         return parent::saving($model);
     }
 
-    public function deleting($model){
+    public function deleting($model)
+    {
         $model->detalleArticulos()->delete();
     }
 

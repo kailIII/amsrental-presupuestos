@@ -9,7 +9,8 @@
 namespace App\Events\Models;
 
 
-class BaseObserver {
+class BaseObserver
+{
 
     public function saving($model)
     {
@@ -17,6 +18,7 @@ class BaseObserver {
             $default = $model->getDefaultValues();
             $model->setRawAttributes(array_merge($default, $model->getAttributes()));
         }
+
         return $model->validate();
     }
 }

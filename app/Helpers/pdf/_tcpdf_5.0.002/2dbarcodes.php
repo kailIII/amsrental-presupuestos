@@ -44,22 +44,24 @@
  * @package com.tecnick.tcpdf
  * @abstract Functions for generating string representation of 2D barcodes.
  * @author Nicola Asuni
- * @copyright 2008-2009 Nicola Asuni - Tecnick.com S.r.l (www.tecnick.com) Via Della Pace, 11 - 09044 - Quartucciu (CA) - ITALY - www.tecnick.com - info@tecnick.com
+ * @copyright 2008-2009 Nicola Asuni - Tecnick.com S.r.l (www.tecnick.com) Via Della Pace, 11 - 09044 - Quartucciu (CA)
+ *     - ITALY - www.tecnick.com - info@tecnick.com
  * @link http://www.tcpdf.org
  * @license http://www.gnu.org/copyleft/lesser.html LGPL
  * @version 1.0.003
  */
 
-	/**
-	* PHP class to creates array representations for 2D barcodes to be used with TCPDF (http://www.tcpdf.org).<br>
-	* @name TCPDFBarcode
-	* @package com.tecnick.tcpdf
-	* @version 1.0.003
-	* @author Nicola Asuni
-	* @link http://www.tcpdf.org
-	* @license http://www.gnu.org/copyleft/lesser.html LGPL
-	*/
-class TCPDF2DBarcode {
+/**
+ * PHP class to creates array representations for 2D barcodes to be used with TCPDF (http://www.tcpdf.org).<br>
+ * @name TCPDFBarcode
+ * @package com.tecnick.tcpdf
+ * @version 1.0.003
+ * @author Nicola Asuni
+ * @link http://www.tcpdf.org
+ * @license http://www.gnu.org/copyleft/lesser.html LGPL
+ */
+class TCPDF2DBarcode
+{
 
 	/**
 	 * @var array representation of barcode.
@@ -74,34 +76,39 @@ class TCPDF2DBarcode {
 	 * <li>$arrcode['num_rows'] required number of rows</li>
 	 * <li>$arrcode['num_cols'] required number of columns</li>
 	 * <li>$arrcode['bcode'][$r][$c] value of the cell is $r row and $c column (0 = transparent, 1 = black)</li></ul>
+	 *
 	 * @param string $code code to print
- 	 * @param string $type type of barcode: <ul>li>RAW: raw mode - comma-separad list of array rows</li><li>RAW2: raw mode - array rows are surrounded by square parenthesis.</li><li>QRCODE : QR-CODE Low error correction</li><li>QRCODE,L : QR-CODE Low error correction</li><li>QRCODE,M : QR-CODE Medium error correction</li><li>QRCODE,Q : QR-CODE Better error correction</li><li>QRCODE,H : QR-CODE Best error correction</li></ul>
+	 * @param string $type type of barcode: <ul>li>RAW: raw mode - comma-separad list of array rows</li><li>RAW2: raw
+	 *     mode - array rows are surrounded by square parenthesis.</li><li>QRCODE : QR-CODE Low error
+	 *     correction</li><li>QRCODE,L : QR-CODE Low error correction</li><li>QRCODE,M : QR-CODE Medium error
+	 *     correction</li><li>QRCODE,Q : QR-CODE Better error correction</li><li>QRCODE,H : QR-CODE Best error
+	 *     correction</li></ul>
 	 */
-	public function __construct($code, $type) {
+	public function __construct($code, $type)
+	{
 		$this->setBarcode($code, $type);
 	}
 
 	/**
-	 * Return an array representations of barcode.
- 	 * @return array
-	 */
-	public function getBarcodeArray() {
-		return $this->barcode_array;
-	}
-
-	/**
 	 * Set the barcode.
+	 *
 	 * @param string $code code to print
- 	 * @param string $type type of barcode: <ul><li>RAW: raw mode - comma-separad list of array rows</li><li>RAW2: raw mode - array rows are surrounded by square parenthesis.</li><li>QRCODE : QR-CODE Low error correction</li><li>QRCODE,L : QR-CODE Low error correction</li><li>QRCODE,M : QR-CODE Medium error correction</li><li>QRCODE,Q : QR-CODE Better error correction</li><li>QRCODE,H : QR-CODE Best error correction</li></ul>
- 	 * @return array
+	 * @param string $type type of barcode: <ul><li>RAW: raw mode - comma-separad list of array rows</li><li>RAW2: raw
+	 *     mode - array rows are surrounded by square parenthesis.</li><li>QRCODE : QR-CODE Low error
+	 *     correction</li><li>QRCODE,L : QR-CODE Low error correction</li><li>QRCODE,M : QR-CODE Medium error
+	 *     correction</li><li>QRCODE,Q : QR-CODE Better error correction</li><li>QRCODE,H : QR-CODE Best error
+	 *     correction</li></ul>
+	 *
+	 * @return array
 	 */
-	public function setBarcode($code, $type) {
+	public function setBarcode($code, $type)
+	{
 		$mode = explode(',', $type);
 		$qrtype = strtoupper($mode[0]);
 		switch ($qrtype) {
 			case 'QRCODE': { // QR-CODE
-				require_once(dirname(__FILE__).'/qrcode.php');
-				if (!isset($mode[1]) OR (!in_array($mode[1],array('L','M','Q','H')))) {
+				require_once(dirname(__FILE__) . '/qrcode.php');
+				if (!isset($mode[1]) OR (!in_array($mode[1], ['L', 'M', 'Q', 'H']))) {
 					$mode[1] = 'L'; // Ddefault: Low error correction
 				}
 				$qrcode = new QRcode($code, strtoupper($mode[1]));
@@ -125,7 +132,7 @@ class TCPDF2DBarcode {
 				}
 				$this->barcode_array['num_rows'] = count($rows);
 				$this->barcode_array['num_cols'] = strlen($rows[0]);
-				$this->barcode_array['bcode'] = array();
+				$this->barcode_array['bcode'] = [];
 				foreach ($rows as $r) {
 					$this->barcode_array['bcode'][] = str_split($r, 1);
 				}
@@ -134,18 +141,28 @@ class TCPDF2DBarcode {
 			case 'TEST': { // TEST MODE
 				$this->barcode_array['num_rows'] = 5;
 				$this->barcode_array['num_cols'] = 15;
-				$this->barcode_array['bcode'] = array(
-					array(1,1,1,0,1,1,1,0,1,1,1,0,1,1,1),
-					array(0,1,0,0,1,0,0,0,1,0,0,0,0,1,0),
-					array(0,1,0,0,1,1,0,0,1,1,1,0,0,1,0),
-					array(0,1,0,0,1,0,0,0,0,0,1,0,0,1,0),
-					array(0,1,0,0,1,1,1,0,1,1,1,0,0,1,0));
+				$this->barcode_array['bcode'] = [
+					[1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1],
+					[0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0],
+					[0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0],
+					[0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0],
+					[0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0]
+				];
 				break;
 			}
 			default: {
 				$this->barcode_array = false;
 			}
 		}
+	}
+
+	/**
+	 * Return an array representations of barcode.
+	 * @return array
+	 */
+	public function getBarcodeArray()
+	{
+		return $this->barcode_array;
 	}
 } // end of class
 

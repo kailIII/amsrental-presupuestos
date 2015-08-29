@@ -42,13 +42,13 @@ if (!defined('K_TCPDF_EXTERNAL_CONFIG')) {
             $_SERVER['DOCUMENT_ROOT'] = str_replace(
                 '\\',
                 '/',
-                substr($_SERVER['SCRIPT_FILENAME'], 0, 0-strlen($_SERVER['PHP_SELF']))
+                substr($_SERVER['SCRIPT_FILENAME'], 0, 0 - strlen($_SERVER['PHP_SELF']))
             );
         } elseif (isset($_SERVER['PATH_TRANSLATED'])) {
             $_SERVER['DOCUMENT_ROOT'] = str_replace(
                 '\\',
                 '/',
-                substr(str_replace('\\\\', '\\', $_SERVER['PATH_TRANSLATED']), 0, 0-strlen($_SERVER['PHP_SELF']))
+                substr(str_replace('\\\\', '\\', $_SERVER['PATH_TRANSLATED']), 0, 0 - strlen($_SERVER['PHP_SELF']))
             );
         } else {
             // define here your DOCUMENT_ROOT path if the previous fails
@@ -58,13 +58,13 @@ if (!defined('K_TCPDF_EXTERNAL_CONFIG')) {
 
     // Automatic calculation for the following K_PATH_MAIN constant
     $kPathMain = str_replace('\\', '/', dirname(__FILE__));
-    $kPathMain = dirname($kPathMain).'/'; // remove the current directory
-    $kPathMain.= '_tcpdf_'.HTML2PDF_USED_TCPDF_VERSION.'/';
+    $kPathMain = dirname($kPathMain) . '/'; // remove the current directory
+    $kPathMain .= '_tcpdf_' . HTML2PDF_USED_TCPDF_VERSION . '/';
     define('K_PATH_MAIN', $kPathMain);
 
     // Automatic calculation for the following K_PATH_URL constant
     if (isset($_SERVER['HTTP_HOST']) AND (!empty($_SERVER['HTTP_HOST']))) {
-        if (isset($_SERVER['HTTPS']) AND (!empty($_SERVER['HTTPS'])) AND strtolower($_SERVER['HTTPS'])!='off') {
+        if (isset($_SERVER['HTTPS']) AND (!empty($_SERVER['HTTPS'])) AND strtolower($_SERVER['HTTPS']) != 'off') {
             $kPathUrl = 'https://';
         } else {
             $kPathUrl = 'http://';
@@ -83,27 +83,27 @@ if (!defined('K_TCPDF_EXTERNAL_CONFIG')) {
      * path for PDF fonts
      * use K_PATH_MAIN.'fonts/old/' for old non-UTF8 fonts
      */
-    define('K_PATH_FONTS', K_PATH_MAIN.'fonts/');
+    define('K_PATH_FONTS', K_PATH_MAIN . 'fonts/');
 
     /**
      * cache directory for temporary files (full path)
      */
-    define('K_PATH_CACHE', K_PATH_MAIN.'cache/');
+    define('K_PATH_CACHE', K_PATH_MAIN . 'cache/');
 
     /**
      * cache directory for temporary files (url path)
      */
-    define('K_PATH_URL_CACHE', K_PATH_URL.'cache/');
+    define('K_PATH_URL_CACHE', K_PATH_URL . 'cache/');
 
     /**
      *images directory
      */
-    define('K_PATH_IMAGES', K_PATH_MAIN.'images/');
+    define('K_PATH_IMAGES', K_PATH_MAIN . 'images/');
 
     /**
      * blank image
      */
-    define('K_BLANK_IMAGE', K_PATH_IMAGES.'_blank.png');
+    define('K_BLANK_IMAGE', K_PATH_IMAGES . '_blank.png');
 
     /**
      * page format
@@ -228,7 +228,7 @@ if (!defined('K_TCPDF_EXTERNAL_CONFIG')) {
     /**
      * reduction factor for small font
      */
-    define('K_SMALL_RATIO', 2/3);
+    define('K_SMALL_RATIO', 2 / 3);
 
     /**
      * set to true to enable the special procedure used to avoid the overlappind of symbols on Thai language
