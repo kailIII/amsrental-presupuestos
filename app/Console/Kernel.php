@@ -27,7 +27,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $prefix = Carbon::now()->format('Y/m/d');
+        $prefix = Carbon::now()->format('Y/m/d/');
         $schedule->command('backup:run --only-db --prefix="db/' . $prefix . '"')->hourly();
         $schedule->command('backup:run --prefix="files/' . $prefix . '"')->weekly();
         $schedule->command('backup:clean')->daily();
