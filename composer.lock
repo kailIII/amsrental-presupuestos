@@ -1174,16 +1174,16 @@
         },
         {
             "name": "spatie/laravel-backup",
-            "version": "2.5.1",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-backup.git",
-                "reference": "5af9d9d26b7cb11f78eef485e576d83c3e71715a"
+                "reference": "6056f477ddcc66f5ee9f257834587d5b1926e7f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-backup/zipball/5af9d9d26b7cb11f78eef485e576d83c3e71715a",
-                "reference": "5af9d9d26b7cb11f78eef485e576d83c3e71715a",
+                "url": "https://api.github.com/repos/spatie/laravel-backup/zipball/6056f477ddcc66f5ee9f257834587d5b1926e7f6",
+                "reference": "6056f477ddcc66f5ee9f257834587d5b1926e7f6",
                 "shasum": ""
             },
             "require": {
@@ -1227,7 +1227,7 @@
                 "mysql",
                 "spatie"
             ],
-            "time": "2015-06-04 22:59:39"
+            "time": "2015-09-13 18:14:13"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1287,12 +1287,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Console.git",
+                "url": "git@github.com:symfony/Console.git",
                 "reference": "9ff9032151186bd66ecee727d728f1319f52d1d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/9ff9032151186bd66ecee727d728f1319f52d1d8",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/f1f7376766394f409b9b33a57a5675a52f8aad93",
                 "reference": "9ff9032151186bd66ecee727d728f1319f52d1d8",
                 "shasum": ""
             },
