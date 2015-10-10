@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d92ec87eda28b17a82b135e70434a0bd",
-    "content-hash": "75cedc9509cadda5e971861714277f0d",
+    "hash": "a3915796fc04d1df7ae9e3f74c4fc796",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -258,16 +257,16 @@
         },
         {
             "name": "graham-campbell/flysystem",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Flysystem.git",
-                "reference": "e5eaf46e5acab7f068dc1ba6d81bf9f97016eede"
+                "reference": "98b819f284a64ec3a0f073d517b18d4ed5355170"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Flysystem/zipball/e5eaf46e5acab7f068dc1ba6d81bf9f97016eede",
-                "reference": "e5eaf46e5acab7f068dc1ba6d81bf9f97016eede",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Flysystem/zipball/98b819f284a64ec3a0f073d517b18d4ed5355170",
+                "reference": "98b819f284a64ec3a0f073d517b18d4ed5355170",
                 "shasum": ""
             },
             "require": {
@@ -292,7 +291,7 @@
                 "league/flysystem-webdav": "~1.0",
                 "league/flysystem-ziparchive": "~1.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "~4.8|~5.0"
             },
             "suggest": {
                 "league/flysystem-aws-s3-v3": "AwsS3 adapter support.",
@@ -311,7 +310,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -343,20 +342,20 @@
                 "laravel",
                 "s3"
             ],
-            "time": "2015-07-06 15:57:15"
+            "time": "2015-10-06 16:50:17"
         },
         {
             "name": "graham-campbell/manager",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
-                "reference": "b386c08594a3e1ff7d0f3401d545460f609c6c1e"
+                "reference": "2fb1898f21107d94a30f4660e5147c5bad04c7b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/b386c08594a3e1ff7d0f3401d545460f609c6c1e",
-                "reference": "b386c08594a3e1ff7d0f3401d545460f609c6c1e",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/2fb1898f21107d94a30f4660e5147c5bad04c7b9",
+                "reference": "2fb1898f21107d94a30f4660e5147c5bad04c7b9",
                 "shasum": ""
             },
             "require": {
@@ -367,7 +366,7 @@
             "require-dev": {
                 "graham-campbell/testbench-core": "~1.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "~4.8|~5.0"
             },
             "type": "library",
             "extra": {
@@ -402,7 +401,7 @@
                 "laravel",
                 "manager"
             ],
-            "time": "2015-06-26 17:39:20"
+            "time": "2015-10-06 16:53:10"
         },
         {
             "name": "illuminate/html",
@@ -1178,16 +1177,16 @@
         },
         {
             "name": "spatie/laravel-backup",
-            "version": "2.6.0",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-backup.git",
-                "reference": "6056f477ddcc66f5ee9f257834587d5b1926e7f6"
+                "reference": "dd3bd48258db41a9e0d4e483cc26681a97dee478"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-backup/zipball/6056f477ddcc66f5ee9f257834587d5b1926e7f6",
-                "reference": "6056f477ddcc66f5ee9f257834587d5b1926e7f6",
+                "url": "https://api.github.com/repos/spatie/laravel-backup/zipball/dd3bd48258db41a9e0d4e483cc26681a97dee478",
+                "reference": "dd3bd48258db41a9e0d4e483cc26681a97dee478",
                 "shasum": ""
             },
             "require": {
@@ -1231,7 +1230,7 @@
                 "mysql",
                 "spatie"
             ],
-            "time": "2015-09-13 18:14:13"
+            "time": "2015-10-08 19:24:15"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3045,16 +3044,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.2.3",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f"
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ef1ca6835468857944d5c3b48fa503d5554cff2f",
-                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/eabf68b476ac7d0f73793aada060f1c1a9bf8979",
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979",
                 "shasum": ""
             },
             "require": {
@@ -3103,7 +3102,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-09-14 06:51:16"
+            "time": "2015-10-06 15:47:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3285,16 +3284,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.10",
+            "version": "4.8.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "463163747474815c5ccd4ae12b5b355ec12158e8"
+                "reference": "bdd199472410fd7e32751f9c814c7e06f2c21bd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/463163747474815c5ccd4ae12b5b355ec12158e8",
-                "reference": "463163747474815c5ccd4ae12b5b355ec12158e8",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/bdd199472410fd7e32751f9c814c7e06f2c21bd5",
+                "reference": "bdd199472410fd7e32751f9c814c7e06f2c21bd5",
                 "shasum": ""
             },
             "require": {
@@ -3353,7 +3352,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-01 09:14:30"
+            "time": "2015-10-07 10:39:46"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -3645,16 +3644,16 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01"
+                "reference": "23af31f402993cfd94e99cbc4b782e9a78eb0e97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/23af31f402993cfd94e99cbc4b782e9a78eb0e97",
+                "reference": "23af31f402993cfd94e99cbc4b782e9a78eb0e97",
                 "shasum": ""
             },
             "require": {
@@ -3692,7 +3691,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2014-10-06 09:23:50"
+            "time": "2015-06-21 15:11:22"
         },
         {
             "name": "sebastian/recursion-context",
